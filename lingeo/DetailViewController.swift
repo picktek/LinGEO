@@ -202,7 +202,8 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         }
         
         do {
-            db = try Connection(Bundle.main.path(forResource: "ilingoka", ofType: "sqlite")!)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            db = try appDelegate.getDB()
             db.trace { print($0) }
 
             return db

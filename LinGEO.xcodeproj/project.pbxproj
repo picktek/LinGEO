@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6B0A34372084C473000C560D /* espeak-data in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A34362084C473000C560D /* espeak-data */; };
 		6B0A34382084C5C9000C560D /* PTeSpeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B45C9492084BC8F0060AF55 /* PTeSpeak.m */; };
+		6B2AF4962088D66F00A44030 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2AF4952088D66F00A44030 /* Reachability.swift */; };
+		6B2AF49E2088D97500A44030 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2AF49D2088D97500A44030 /* SwiftyJSON.swift */; };
 		6B32363C208732520009696A /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B32363B208732520009696A /* BookmarksTableViewController.swift */; };
 		6B323645208732B90009696A /* Bookmarks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B323643208732B90009696A /* Bookmarks.xcdatamodeld */; };
 		6B45C8EF208494B60060AF55 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45C8EE208494B60060AF55 /* Debouncer.swift */; };
@@ -124,6 +126,8 @@
 
 /* Begin PBXFileReference section */
 		6B0A34362084C473000C560D /* espeak-data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "espeak-data"; path = "espeak/espeak-data"; sourceTree = "<group>"; };
+		6B2AF4952088D66F00A44030 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		6B2AF49D2088D97500A44030 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		6B32363B208732520009696A /* BookmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewController.swift; sourceTree = "<group>"; };
 		6B323644208732B90009696A /* Bookmarks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookmarks.xcdatamodel; sourceTree = "<group>"; };
 		6B45C8EE208494B60060AF55 /* Debouncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 				6B5E0C9C2080B69100010F07 /* MasterViewController.swift */,
 				6B5E0C9E2080B69100010F07 /* DetailViewController.swift */,
 				6B32363B208732520009696A /* BookmarksTableViewController.swift */,
+				6B2AF4952088D66F00A44030 /* Reachability.swift */,
+				6B2AF49D2088D97500A44030 /* SwiftyJSON.swift */,
 				6B5E0CA02080B69100010F07 /* Main.storyboard */,
 				6B5E0CA32080B69200010F07 /* Assets.xcassets */,
 				6B5E0CA52080B69200010F07 /* LaunchScreen.storyboard */,
@@ -486,7 +492,9 @@
 				6B6EE4EB2084C3C000F70470 /* fifo.cpp in Sources */,
 				6B6EE5002084C3C000F70470 /* event.cpp in Sources */,
 				6B6EE4F72084C3C000F70470 /* wavegen.cpp in Sources */,
+				6B2AF4962088D66F00A44030 /* Reachability.swift in Sources */,
 				6B6EE4FE2084C3C000F70470 /* numbers.cpp in Sources */,
+				6B2AF49E2088D97500A44030 /* SwiftyJSON.swift in Sources */,
 				6B6EE4F62084C3C000F70470 /* tr_languages.cpp in Sources */,
 				6B0A34382084C5C9000C560D /* PTeSpeak.m in Sources */,
 			);
@@ -643,7 +651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = N43S8JF6JT;
 				INFOPLIST_FILE = lingeo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -667,7 +675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = N43S8JF6JT;
 				INFOPLIST_FILE = lingeo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

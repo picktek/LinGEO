@@ -30,7 +30,8 @@ class MasterViewController: UITableViewController {
         }
         
         do {
-            db = try Connection(Bundle.main.path(forResource: "ilingoka", ofType: "sqlite")!)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            db = try appDelegate.getDB()
         } catch {
             print(error)
         }
@@ -67,13 +68,13 @@ class MasterViewController: UITableViewController {
             return
         }
         
-//        DispatchQueue.global(qos: .userInteractive).async {
+        self.searchResult.removeAll()
+        DispatchQueue.global(qos: .userInteractive).async {
             do {
                 let query = "SELECT t1.id, t1.eng, t1.transcription, t2.geo, t4.name, t4.abbr FROM eng t1, geo t2, geo_eng t3, types t4 " +
                 "WHERE t1.eng LIKE ? || \"%\" AND t3.eng_id=t1.id AND t2.id=t3.geo_id AND t4.id=t2.type " +
                 "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT 30"
                 
-                self.searchResult.removeAll()
                 for rowJoined in try self.db.prepare(query, [self.searchQuery]) {
                     self.searchResult.append([
                         "id": String(rowJoined[0] as! Int64),
@@ -89,7 +90,7 @@ class MasterViewController: UITableViewController {
             } catch {
                 print(error)
             }
-//        }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
