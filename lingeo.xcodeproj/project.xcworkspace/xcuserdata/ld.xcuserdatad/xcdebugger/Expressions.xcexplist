@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "MasterViewController.sectionIndexTitles(for:):MasterViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "letter">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.tableView(_:numberOfRowsInSection:):DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MasterViewController.tableView(_:cellForRowAt:):MasterViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rowChunk">
+            </PersistentString>
+            <PersistentString
+               value = "chunkStart">
+            </PersistentString>
+            <PersistentString
+               value = "chunkEnd">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.saveBookmark(_:):DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "geos">
+            </PersistentString>
+            <PersistentString
+               value = "geos.joined(&quot;,&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SyncSQLite.fetchedResultsController.getter:SyncSQLite.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.managedObjectContext">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.deleteBookmark(_:):DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MasterViewController.prepare(for:sender:):MasterViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.destination">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.configureView():DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailItemID">
+            </PersistentString>
+            <PersistentString
+               value = "count">
+            </PersistentString>
+            <PersistentString
+               value = "appDelegate.persistentContainer.viewContext">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
