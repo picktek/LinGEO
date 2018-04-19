@@ -3,736 +3,721 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		131106080E465B9C00ADB761 /* ilingoka.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 131106070E465B9C00ADB761 /* ilingoka.sqlite */; };
-		131106200E46676500ADB761 /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 1311061F0E46676500ADB761 /* Bookmark.m */; };
-		139F57050E44FC37009EA047 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 139F57040E44FC37009EA047 /* DetailView.xib */; };
-		139F57090E44FC6C009EA047 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139F57080E44FC6C009EA047 /* DetailViewController.m */; };
-		139F57B70E450A0B009EA047 /* BookmarkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 139F57B60E450A0B009EA047 /* BookmarkView.xib */; };
-		139F57BB0E450A23009EA047 /* BookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139F57BA0E450A23009EA047 /* BookmarkViewController.m */; };
-		13B84F150E45C81E0058FDC2 /* BookmarkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B84F140E45C81E0058FDC2 /* BookmarkDetailViewController.m */; };
-		13B84F770E45CCFE0058FDC2 /* BookmarkDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B84F760E45CCFE0058FDC2 /* BookmarkDetailView.xib */; };
-		13B850510E461FA80058FDC2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B850500E461FA80058FDC2 /* libsqlite3.dylib */; };
-		13FB7BC40E44DB560081C08E /* EngGeo.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FB7BC30E44DB560081C08E /* EngGeo.m */; };
-		1D3623260D0F684500981E51 /* LinGEOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* LinGEOAppDelegate.m */; };
-		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
-		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
-		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
-		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
-		C6538938128DA68C00C8FC07 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6538937128DA68C00C8FC07 /* Entitlements.plist */; };
-		C68ADDDF128AA3B2001FFD4C /* ShadowedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68ADDDE128AA3B2001FFD4C /* ShadowedTableView.m */; };
-		C68ADDED128AA3E9001FFD4C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68ADDEC128AA3E9001FFD4C /* QuartzCore.framework */; };
-		C69479921524F73F00497D6B /* espeak-data in Resources */ = {isa = PBXBuildFile; fileRef = C69479911524F73F00497D6B /* espeak-data */; };
-		C69479BF1524F82A00497D6B /* compiledict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479981524F82A00497D6B /* compiledict.cpp */; };
-		C69479C01524F82A00497D6B /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479991524F82A00497D6B /* debug.cpp */; };
-		C69479C11524F82A00497D6B /* dictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C694799B1524F82A00497D6B /* dictionary.cpp */; };
-		C69479C21524F82A00497D6B /* espeak_command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C694799C1524F82A00497D6B /* espeak_command.cpp */; };
-		C69479C31524F82A00497D6B /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C694799E1524F82A00497D6B /* event.cpp */; };
-		C69479C41524F82A00497D6B /* fifo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479A01524F82A00497D6B /* fifo.cpp */; };
-		C69479C51524F82A00497D6B /* intonation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479A21524F82A00497D6B /* intonation.cpp */; };
-		C69479C61524F82A00497D6B /* klatt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479A31524F82A00497D6B /* klatt.cpp */; };
-		C69479C71524F82A00497D6B /* mbrowrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479A51524F82A00497D6B /* mbrowrap.cpp */; };
-		C69479C81524F82A00497D6B /* numbers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479A71524F82A00497D6B /* numbers.cpp */; };
-		C69479C91524F82A00497D6B /* phonemelist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479A91524F82A00497D6B /* phonemelist.cpp */; };
-		C69479CA1524F82A00497D6B /* readclause.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479AA1524F82A00497D6B /* readclause.cpp */; };
-		C69479CB1524F82A00497D6B /* setlengths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479AB1524F82A00497D6B /* setlengths.cpp */; };
-		C69479CC1524F82A00497D6B /* sonic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479AD1524F82A00497D6B /* sonic.cpp */; };
-		C69479CD1524F82A00497D6B /* speak_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479AF1524F82A00497D6B /* speak_lib.cpp */; };
-		C69479CE1524F82A00497D6B /* synth_mbrola.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479B31524F82A00497D6B /* synth_mbrola.cpp */; };
-		C69479CF1524F82A00497D6B /* synthdata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479B41524F82A00497D6B /* synthdata.cpp */; };
-		C69479D01524F82A00497D6B /* synthesize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479B51524F82A00497D6B /* synthesize.cpp */; };
-		C69479D11524F82A00497D6B /* tr_languages.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479B71524F82A00497D6B /* tr_languages.cpp */; };
-		C69479D21524F82A00497D6B /* translate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479B81524F82A00497D6B /* translate.cpp */; };
-		C69479D31524F82A00497D6B /* voices.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479BB1524F82A00497D6B /* voices.cpp */; };
-		C69479D41524F82A00497D6B /* wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479BC1524F82A00497D6B /* wave.cpp */; };
-		C69479D51524F82A00497D6B /* wavegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69479BE1524F82A00497D6B /* wavegen.cpp */; };
-		C69479D71524FF8500497D6B /* Play-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C69479D61524FF8500497D6B /* Play-icon.png */; };
-		C69479D91525045C00497D6B /* Stop-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C69479D81525045C00497D6B /* Stop-icon.png */; };
-		C69479DA15250B4500497D6B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C694798B1524F24400497D6B /* Icon@2x.png */; };
-		C6947A291525965D00497D6B /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6947A281525965D00497D6B /* MainWindow-iPad.xib */; };
-		C6947A311525A07D00497D6B /* Icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C6947A301525A07D00497D6B /* Icon~ipad.png */; };
-		C6947A331525A0D900497D6B /* Icon~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6947A321525A0D900497D6B /* Icon~ipad@2x.png */; };
-		C6947A421525C03900497D6B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C606177A106784870090295B /* Default.png */; };
-		C6947A431525C03B00497D6B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6947A2A15259E2900497D6B /* Default@2x.png */; };
-		C6947A441525C15700497D6B /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C6947A381525BF0300497D6B /* Default-Portrait~ipad.png */; };
-		C6947A451525C15900497D6B /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C6947A3E1525BF5D00497D6B /* Default-Landscape~ipad.png */; };
-		C6947A471525C15F00497D6B /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C6947A461525C15F00497D6B /* Default-Portrait@2x~ipad.png */; };
-		C6947A491525C16400497D6B /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C6947A481525C16400497D6B /* Default-Landscape@2x~ipad.png */; };
-		C6947A4C1525CFA700497D6B /* PTeSpeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C6947A4B1525CFA700497D6B /* PTeSpeak.m */; };
-		C6B01AC0128BEDEA0025D0A0 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B01ABF128BEDEA0025D0A0 /* background.png */; };
-		C6B01E51128D7C3D0025D0A0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B01E50128D7C3D0025D0A0 /* MessageUI.framework */; };
-		C6C991F5162A931100B642BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C991F4162A931100B642BE /* Default-568h@2x.png */; };
-		C6E9FFA6105AAA4B001078EB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6E9FFA5105AAA4B001078EB /* Icon.png */; };
-		C6F38BC0128E92B400B4535A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F38BBF128E92B400B4535A /* AudioToolbox.framework */; };
-		C6F38BC3128E92C300B4535A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F38BC2128E92C300B4535A /* MediaPlayer.framework */; };
-		C6F38BC6128E92CE00B4535A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F38BC5128E92CE00B4535A /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		C6F38C66128E948600B4535A /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F38C51128E948600B4535A /* CDataScanner.m */; };
-		C6F38C67128E948600B4535A /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F38C54128E948600B4535A /* CDataScanner_Extensions.m */; };
-		C6F38C68128E948600B4535A /* NSCharacterSet_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F38C56128E948600B4535A /* NSCharacterSet_Extensions.m */; };
-		C6F38C69128E948600B4535A /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F38C58128E948600B4535A /* NSDictionary_JSONExtensions.m */; };
-		C6F38C6A128E948600B4535A /* NSScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F38C5A128E948600B4535A /* NSScanner_Extensions.m */; };
-		C6F38C6B128E948600B4535A /* CJSONDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F38C5D128E948600B4535A /* CJSONDataSerializer.m */; };
-		C6F38C6C128E948600B4535A /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F38C5F128E948600B4535A /* CJSONDeserializer.m */; };
-		C6F38C6D128E948600B4535A /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F38C61128E948600B4535A /* CJSONScanner.m */; };
-		C6F38C6E128E948600B4535A /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F38C63128E948600B4535A /* CJSONSerializer.m */; };
-		C6F38C6F128E948600B4535A /* CSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F38C65128E948600B4535A /* CSerializedJSONData.m */; };
+		6B0A34372084C473000C560D /* espeak-data in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A34362084C473000C560D /* espeak-data */; };
+		6B0A34382084C5C9000C560D /* PTeSpeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B45C9492084BC8F0060AF55 /* PTeSpeak.m */; };
+		6B32363C208732520009696A /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B32363B208732520009696A /* BookmarksTableViewController.swift */; };
+		6B323645208732B90009696A /* Bookmarks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B323643208732B90009696A /* Bookmarks.xcdatamodeld */; };
+		6B45C8EF208494B60060AF55 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45C8EE208494B60060AF55 /* Debouncer.swift */; };
+		6B45C9022084BB630060AF55 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B45C9012084BB630060AF55 /* AudioToolbox.framework */; };
+		6B5E0C982080B69100010F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E0C972080B69100010F07 /* AppDelegate.swift */; };
+		6B5E0C9D2080B69100010F07 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E0C9C2080B69100010F07 /* MasterViewController.swift */; };
+		6B5E0C9F2080B69100010F07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E0C9E2080B69100010F07 /* DetailViewController.swift */; };
+		6B5E0CA22080B69100010F07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5E0CA02080B69100010F07 /* Main.storyboard */; };
+		6B5E0CA42080B69200010F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5E0CA32080B69200010F07 /* Assets.xcassets */; };
+		6B5E0CA72080B69200010F07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5E0CA52080B69200010F07 /* LaunchScreen.storyboard */; };
+		6B5E0CAF2080B74700010F07 /* ilingoka.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6B5E0CAE2080B74700010F07 /* ilingoka.sqlite */; };
+		6B5E0CD32080DEA800010F07 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5E0CBD2080BB6C00010F07 /* SQLite.framework */; };
+		6B5E0CD42080DEA800010F07 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5E0CBD2080BB6C00010F07 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B6EE4EA2084C3C000F70470 /* speak_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4BC2084C3C000F70470 /* speak_lib.cpp */; };
+		6B6EE4EB2084C3C000F70470 /* fifo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4BE2084C3C000F70470 /* fifo.cpp */; };
+		6B6EE4EC2084C3C000F70470 /* wave_sada.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4C02084C3C000F70470 /* wave_sada.cpp */; };
+		6B6EE4ED2084C3C000F70470 /* wave_pulse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4C12084C3C000F70470 /* wave_pulse.cpp */; };
+		6B6EE4EE2084C3C000F70470 /* synthesize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4C32084C3C000F70470 /* synthesize.cpp */; };
+		6B6EE4EF2084C3C000F70470 /* compiledict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4C42084C3C000F70470 /* compiledict.cpp */; };
+		6B6EE4F02084C3C000F70470 /* mbrowrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4C52084C3C000F70470 /* mbrowrap.cpp */; };
+		6B6EE4F12084C3C000F70470 /* synthdata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4C72084C3C000F70470 /* synthdata.cpp */; };
+		6B6EE4F22084C3C000F70470 /* voices.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4C82084C3C000F70470 /* voices.cpp */; };
+		6B6EE4F32084C3C000F70470 /* wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4CD2084C3C000F70470 /* wave.cpp */; };
+		6B6EE4F42084C3C000F70470 /* readclause.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4D22084C3C000F70470 /* readclause.cpp */; };
+		6B6EE4F52084C3C000F70470 /* phonemelist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4D32084C3C000F70470 /* phonemelist.cpp */; };
+		6B6EE4F62084C3C000F70470 /* tr_languages.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4D42084C3C000F70470 /* tr_languages.cpp */; };
+		6B6EE4F72084C3C000F70470 /* wavegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4D52084C3C000F70470 /* wavegen.cpp */; };
+		6B6EE4F82084C3C000F70470 /* setlengths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4D82084C3C000F70470 /* setlengths.cpp */; };
+		6B6EE4F92084C3C000F70470 /* klatt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4D92084C3C000F70470 /* klatt.cpp */; };
+		6B6EE4FA2084C3C000F70470 /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4DA2084C3C000F70470 /* debug.cpp */; };
+		6B6EE4FB2084C3C000F70470 /* intonation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4DB2084C3C000F70470 /* intonation.cpp */; };
+		6B6EE4FD2084C3C000F70470 /* translate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4DD2084C3C000F70470 /* translate.cpp */; };
+		6B6EE4FE2084C3C000F70470 /* numbers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4DE2084C3C000F70470 /* numbers.cpp */; };
+		6B6EE4FF2084C3C000F70470 /* espeak_command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4DF2084C3C000F70470 /* espeak_command.cpp */; };
+		6B6EE5002084C3C000F70470 /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4E22084C3C000F70470 /* event.cpp */; };
+		6B6EE5012084C3C000F70470 /* sonic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4E52084C3C000F70470 /* sonic.cpp */; };
+		6B6EE5032084C3C000F70470 /* dictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4E82084C3C000F70470 /* dictionary.cpp */; };
+		6B6EE5042084C3C000F70470 /* synth_mbrola.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4E92084C3C000F70470 /* synth_mbrola.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6B5E0CBC2080BB6C00010F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		6B5E0CBE2080BB6C00010F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
+			remoteInfo = "SQLiteTests iOS";
+		};
+		6B5E0CC02080BB6C00010F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
+			remoteInfo = "SQLite Mac";
+		};
+		6B5E0CC22080BB6C00010F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
+			remoteInfo = "SQLiteTests Mac";
+		};
+		6B5E0CC42080BB6C00010F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
+			remoteInfo = "SQLite tvOS";
+		};
+		6B5E0CC62080BB6C00010F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
+			remoteInfo = "SQLiteTests tvOS";
+		};
+		6B5E0CC82080BB6C00010F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A121AC451CA35C79005A31D1;
+			remoteInfo = "SQLite watchOS";
+		};
+		6B5E0CD52080DEA800010F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6B5E0CD72080DEA800010F07 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6B5E0CD42080DEA800010F07 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		131106070E465B9C00ADB761 /* ilingoka.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ilingoka.sqlite; sourceTree = SOURCE_ROOT; };
-		1311061E0E46676500ADB761 /* Bookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bookmark.h; sourceTree = "<group>"; };
-		1311061F0E46676500ADB761 /* Bookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bookmark.m; sourceTree = "<group>"; };
-		139F57040E44FC37009EA047 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
-		139F57070E44FC6C009EA047 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		139F57080E44FC6C009EA047 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		139F57B60E450A0B009EA047 /* BookmarkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkView.xib; sourceTree = "<group>"; };
-		139F57B90E450A23009EA047 /* BookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkViewController.h; sourceTree = "<group>"; };
-		139F57BA0E450A23009EA047 /* BookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkViewController.m; sourceTree = "<group>"; };
-		13B84F130E45C81E0058FDC2 /* BookmarkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkDetailViewController.h; sourceTree = "<group>"; };
-		13B84F140E45C81E0058FDC2 /* BookmarkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkDetailViewController.m; sourceTree = "<group>"; };
-		13B84F760E45CCFE0058FDC2 /* BookmarkDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkDetailView.xib; sourceTree = "<group>"; };
-		13B850500E461FA80058FDC2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		13FB7BC20E44DB560081C08E /* EngGeo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngGeo.h; path = Classes/EngGeo.h; sourceTree = "<group>"; };
-		13FB7BC30E44DB560081C08E /* EngGeo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EngGeo.m; path = Classes/EngGeo.m; sourceTree = "<group>"; };
-		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* LinGEOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinGEOAppDelegate.h; path = Classes/LinGEOAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* LinGEOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinGEOAppDelegate.m; path = Classes/LinGEOAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* LinGEO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinGEO.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2899E55F0DE3E45000AC0155 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
-		28A0AAE50D9B0CCF005BE974 /* LinGEO_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinGEO_Prefix.pch; sourceTree = "<group>"; };
-		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C606177A106784870090295B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		C6538937128DA68C00C8FC07 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
-		C68ADDDD128AA3B2001FFD4C /* ShadowedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowedTableView.h; sourceTree = "<group>"; };
-		C68ADDDE128AA3B2001FFD4C /* ShadowedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowedTableView.m; sourceTree = "<group>"; };
-		C68ADDEC128AA3E9001FFD4C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		C694798B1524F24400497D6B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		C69479911524F73F00497D6B /* espeak-data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "espeak-data"; path = "espeak-1.46.14/espeak-data"; sourceTree = "<group>"; };
-		C69479981524F82A00497D6B /* compiledict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = compiledict.cpp; path = "espeak-1.46.14/src/compiledict.cpp"; sourceTree = "<group>"; };
-		C69479991524F82A00497D6B /* debug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = debug.cpp; path = "espeak-1.46.14/src/debug.cpp"; sourceTree = "<group>"; };
-		C694799A1524F82A00497D6B /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = debug.h; path = "espeak-1.46.14/src/debug.h"; sourceTree = "<group>"; };
-		C694799B1524F82A00497D6B /* dictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dictionary.cpp; path = "espeak-1.46.14/src/dictionary.cpp"; sourceTree = "<group>"; };
-		C694799C1524F82A00497D6B /* espeak_command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = espeak_command.cpp; path = "espeak-1.46.14/src/espeak_command.cpp"; sourceTree = "<group>"; };
-		C694799D1524F82A00497D6B /* espeak_command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = espeak_command.h; path = "espeak-1.46.14/src/espeak_command.h"; sourceTree = "<group>"; };
-		C694799E1524F82A00497D6B /* event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = event.cpp; path = "espeak-1.46.14/src/event.cpp"; sourceTree = "<group>"; };
-		C694799F1524F82A00497D6B /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = event.h; path = "espeak-1.46.14/src/event.h"; sourceTree = "<group>"; };
-		C69479A01524F82A00497D6B /* fifo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fifo.cpp; path = "espeak-1.46.14/src/fifo.cpp"; sourceTree = "<group>"; };
-		C69479A11524F82A00497D6B /* fifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fifo.h; path = "espeak-1.46.14/src/fifo.h"; sourceTree = "<group>"; };
-		C69479A21524F82A00497D6B /* intonation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intonation.cpp; path = "espeak-1.46.14/src/intonation.cpp"; sourceTree = "<group>"; };
-		C69479A31524F82A00497D6B /* klatt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = klatt.cpp; path = "espeak-1.46.14/src/klatt.cpp"; sourceTree = "<group>"; };
-		C69479A41524F82A00497D6B /* klatt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = klatt.h; path = "espeak-1.46.14/src/klatt.h"; sourceTree = "<group>"; };
-		C69479A51524F82A00497D6B /* mbrowrap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mbrowrap.cpp; path = "espeak-1.46.14/src/mbrowrap.cpp"; sourceTree = "<group>"; };
-		C69479A61524F82A00497D6B /* mbrowrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mbrowrap.h; path = "espeak-1.46.14/src/mbrowrap.h"; sourceTree = "<group>"; };
-		C69479A71524F82A00497D6B /* numbers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = numbers.cpp; path = "espeak-1.46.14/src/numbers.cpp"; sourceTree = "<group>"; };
-		C69479A81524F82A00497D6B /* phoneme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = phoneme.h; path = "espeak-1.46.14/src/phoneme.h"; sourceTree = "<group>"; };
-		C69479A91524F82A00497D6B /* phonemelist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = phonemelist.cpp; path = "espeak-1.46.14/src/phonemelist.cpp"; sourceTree = "<group>"; };
-		C69479AA1524F82A00497D6B /* readclause.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = readclause.cpp; path = "espeak-1.46.14/src/readclause.cpp"; sourceTree = "<group>"; };
-		C69479AB1524F82A00497D6B /* setlengths.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = setlengths.cpp; path = "espeak-1.46.14/src/setlengths.cpp"; sourceTree = "<group>"; };
-		C69479AC1524F82A00497D6B /* sintab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sintab.h; path = "espeak-1.46.14/src/sintab.h"; sourceTree = "<group>"; };
-		C69479AD1524F82A00497D6B /* sonic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sonic.cpp; path = "espeak-1.46.14/src/sonic.cpp"; sourceTree = "<group>"; };
-		C69479AE1524F82A00497D6B /* sonic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sonic.h; path = "espeak-1.46.14/src/sonic.h"; sourceTree = "<group>"; };
-		C69479AF1524F82A00497D6B /* speak_lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = speak_lib.cpp; path = "espeak-1.46.14/src/speak_lib.cpp"; sourceTree = "<group>"; };
-		C69479B01524F82A00497D6B /* speak_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = speak_lib.h; path = "espeak-1.46.14/src/speak_lib.h"; sourceTree = "<group>"; };
-		C69479B11524F82A00497D6B /* speech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = speech.h; path = "espeak-1.46.14/src/speech.h"; sourceTree = "<group>"; };
-		C69479B21524F82A00497D6B /* StdAfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StdAfx.h; path = "espeak-1.46.14/src/StdAfx.h"; sourceTree = "<group>"; };
-		C69479B31524F82A00497D6B /* synth_mbrola.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = synth_mbrola.cpp; path = "espeak-1.46.14/src/synth_mbrola.cpp"; sourceTree = "<group>"; };
-		C69479B41524F82A00497D6B /* synthdata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = synthdata.cpp; path = "espeak-1.46.14/src/synthdata.cpp"; sourceTree = "<group>"; };
-		C69479B51524F82A00497D6B /* synthesize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = synthesize.cpp; path = "espeak-1.46.14/src/synthesize.cpp"; sourceTree = "<group>"; };
-		C69479B61524F82A00497D6B /* synthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = synthesize.h; path = "espeak-1.46.14/src/synthesize.h"; sourceTree = "<group>"; };
-		C69479B71524F82A00497D6B /* tr_languages.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tr_languages.cpp; path = "espeak-1.46.14/src/tr_languages.cpp"; sourceTree = "<group>"; };
-		C69479B81524F82A00497D6B /* translate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = translate.cpp; path = "espeak-1.46.14/src/translate.cpp"; sourceTree = "<group>"; };
-		C69479B91524F82A00497D6B /* translate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = translate.h; path = "espeak-1.46.14/src/translate.h"; sourceTree = "<group>"; };
-		C69479BA1524F82A00497D6B /* voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = voice.h; path = "espeak-1.46.14/src/voice.h"; sourceTree = "<group>"; };
-		C69479BB1524F82A00497D6B /* voices.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = voices.cpp; path = "espeak-1.46.14/src/voices.cpp"; sourceTree = "<group>"; };
-		C69479BC1524F82A00497D6B /* wave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = wave.cpp; path = "espeak-1.46.14/src/wave.cpp"; sourceTree = "<group>"; };
-		C69479BD1524F82A00497D6B /* wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wave.h; path = "espeak-1.46.14/src/wave.h"; sourceTree = "<group>"; };
-		C69479BE1524F82A00497D6B /* wavegen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = wavegen.cpp; path = "espeak-1.46.14/src/wavegen.cpp"; sourceTree = "<group>"; };
-		C69479D61524FF8500497D6B /* Play-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play-icon.png"; sourceTree = "<group>"; };
-		C69479D81525045C00497D6B /* Stop-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stop-icon.png"; sourceTree = "<group>"; };
-		C6947A281525965D00497D6B /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
-		C6947A2A15259E2900497D6B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		C6947A301525A07D00497D6B /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~ipad.png"; sourceTree = "<group>"; };
-		C6947A321525A0D900497D6B /* Icon~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~ipad@2x.png"; sourceTree = "<group>"; };
-		C6947A381525BF0300497D6B /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
-		C6947A3E1525BF5D00497D6B /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		C6947A461525C15F00497D6B /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
-		C6947A481525C16400497D6B /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
-		C6947A4A1525CFA700497D6B /* PTeSpeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTeSpeak.h; sourceTree = "<group>"; };
-		C6947A4B1525CFA700497D6B /* PTeSpeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTeSpeak.m; sourceTree = "<group>"; };
-		C6B01ABF128BEDEA0025D0A0 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		C6B01E50128D7C3D0025D0A0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		C6C991F4162A931100B642BE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C6E9FFA5105AAA4B001078EB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		C6F38BBF128E92B400B4535A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		C6F38BC2128E92C300B4535A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		C6F38BC5128E92CE00B4535A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		C6F38C50128E948600B4535A /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
-		C6F38C51128E948600B4535A /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
-		C6F38C53128E948600B4535A /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
-		C6F38C54128E948600B4535A /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
-		C6F38C55128E948600B4535A /* NSCharacterSet_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCharacterSet_Extensions.h; sourceTree = "<group>"; };
-		C6F38C56128E948600B4535A /* NSCharacterSet_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCharacterSet_Extensions.m; sourceTree = "<group>"; };
-		C6F38C57128E948600B4535A /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
-		C6F38C58128E948600B4535A /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
-		C6F38C59128E948600B4535A /* NSScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScanner_Extensions.h; sourceTree = "<group>"; };
-		C6F38C5A128E948600B4535A /* NSScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScanner_Extensions.m; sourceTree = "<group>"; };
-		C6F38C5C128E948600B4535A /* CJSONDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDataSerializer.h; sourceTree = "<group>"; };
-		C6F38C5D128E948600B4535A /* CJSONDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDataSerializer.m; sourceTree = "<group>"; };
-		C6F38C5E128E948600B4535A /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
-		C6F38C5F128E948600B4535A /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
-		C6F38C60128E948600B4535A /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
-		C6F38C61128E948600B4535A /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
-		C6F38C62128E948600B4535A /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
-		C6F38C63128E948600B4535A /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
-		C6F38C64128E948600B4535A /* CSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSerializedJSONData.h; sourceTree = "<group>"; };
-		C6F38C65128E948600B4535A /* CSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSerializedJSONData.m; sourceTree = "<group>"; };
+		6B0A34362084C473000C560D /* espeak-data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "espeak-data"; path = "espeak/espeak-data"; sourceTree = "<group>"; };
+		6B32363B208732520009696A /* BookmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewController.swift; sourceTree = "<group>"; };
+		6B323644208732B90009696A /* Bookmarks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookmarks.xcdatamodel; sourceTree = "<group>"; };
+		6B45C8EE208494B60060AF55 /* Debouncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
+		6B45C8FE2084BB460060AF55 /* LinGEO-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinGEO-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B45C9012084BB630060AF55 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6B45C9492084BC8F0060AF55 /* PTeSpeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTeSpeak.m; sourceTree = "<group>"; };
+		6B45C94A2084BC8F0060AF55 /* PTeSpeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTeSpeak.h; sourceTree = "<group>"; };
+		6B5E0C942080B69100010F07 /* LinGEO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinGEO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B5E0C972080B69100010F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6B5E0C9C2080B69100010F07 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		6B5E0C9E2080B69100010F07 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6B5E0CA12080B69100010F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B5E0CA32080B69200010F07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B5E0CA62080B69200010F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B5E0CA82080B69200010F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B5E0CAE2080B74700010F07 /* ilingoka.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = ilingoka.sqlite; path = data/ilingoka.sqlite; sourceTree = SOURCE_ROOT; };
+		6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = SQLite/SQLite.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6B6EE4BC2084C3C000F70470 /* speak_lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = speak_lib.cpp; sourceTree = "<group>"; };
+		6B6EE4BD2084C3C000F70470 /* portaudio18.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio18.h; sourceTree = "<group>"; };
+		6B6EE4BE2084C3C000F70470 /* fifo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fifo.cpp; sourceTree = "<group>"; };
+		6B6EE4BF2084C3C000F70470 /* sintab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sintab.h; sourceTree = "<group>"; };
+		6B6EE4C02084C3C000F70470 /* wave_sada.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wave_sada.cpp; sourceTree = "<group>"; };
+		6B6EE4C12084C3C000F70470 /* wave_pulse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wave_pulse.cpp; sourceTree = "<group>"; };
+		6B6EE4C22084C3C000F70470 /* fifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fifo.h; sourceTree = "<group>"; };
+		6B6EE4C32084C3C000F70470 /* synthesize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = synthesize.cpp; sourceTree = "<group>"; };
+		6B6EE4C42084C3C000F70470 /* compiledict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compiledict.cpp; sourceTree = "<group>"; };
+		6B6EE4C52084C3C000F70470 /* mbrowrap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mbrowrap.cpp; sourceTree = "<group>"; };
+		6B6EE4C62084C3C000F70470 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		6B6EE4C72084C3C000F70470 /* synthdata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = synthdata.cpp; sourceTree = "<group>"; };
+		6B6EE4C82084C3C000F70470 /* voices.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = voices.cpp; sourceTree = "<group>"; };
+		6B6EE4C92084C3C000F70470 /* StdAfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdAfx.h; sourceTree = "<group>"; };
+		6B6EE4CA2084C3C000F70470 /* synthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = synthesize.h; sourceTree = "<group>"; };
+		6B6EE4CB2084C3C000F70470 /* espeak_command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = espeak_command.h; sourceTree = "<group>"; };
+		6B6EE4CC2084C3C000F70470 /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		6B6EE4CD2084C3C000F70470 /* wave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wave.cpp; sourceTree = "<group>"; };
+		6B6EE4CE2084C3C000F70470 /* translate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = translate.h; sourceTree = "<group>"; };
+		6B6EE4CF2084C3C000F70470 /* sonic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sonic.h; sourceTree = "<group>"; };
+		6B6EE4D02084C3C000F70470 /* phoneme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phoneme.h; sourceTree = "<group>"; };
+		6B6EE4D12084C3C000F70470 /* portaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio.h; sourceTree = "<group>"; };
+		6B6EE4D22084C3C000F70470 /* readclause.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = readclause.cpp; sourceTree = "<group>"; };
+		6B6EE4D32084C3C000F70470 /* phonemelist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = phonemelist.cpp; sourceTree = "<group>"; };
+		6B6EE4D42084C3C000F70470 /* tr_languages.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tr_languages.cpp; sourceTree = "<group>"; };
+		6B6EE4D52084C3C000F70470 /* wavegen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavegen.cpp; sourceTree = "<group>"; };
+		6B6EE4D62084C3C000F70470 /* speak_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = speak_lib.h; sourceTree = "<group>"; };
+		6B6EE4D72084C3C000F70470 /* speech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = speech.h; sourceTree = "<group>"; };
+		6B6EE4D82084C3C000F70470 /* setlengths.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = setlengths.cpp; sourceTree = "<group>"; };
+		6B6EE4D92084C3C000F70470 /* klatt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = klatt.cpp; sourceTree = "<group>"; };
+		6B6EE4DA2084C3C000F70470 /* debug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = debug.cpp; sourceTree = "<group>"; };
+		6B6EE4DB2084C3C000F70470 /* intonation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = intonation.cpp; sourceTree = "<group>"; };
+		6B6EE4DD2084C3C000F70470 /* translate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = translate.cpp; sourceTree = "<group>"; };
+		6B6EE4DE2084C3C000F70470 /* numbers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = numbers.cpp; sourceTree = "<group>"; };
+		6B6EE4DF2084C3C000F70470 /* espeak_command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = espeak_command.cpp; sourceTree = "<group>"; };
+		6B6EE4E02084C3C000F70470 /* portaudio19.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio19.h; sourceTree = "<group>"; };
+		6B6EE4E12084C3C000F70470 /* voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voice.h; sourceTree = "<group>"; };
+		6B6EE4E22084C3C000F70470 /* event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = event.cpp; sourceTree = "<group>"; };
+		6B6EE4E32084C3C000F70470 /* wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wave.h; sourceTree = "<group>"; };
+		6B6EE4E42084C3C000F70470 /* klatt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = klatt.h; sourceTree = "<group>"; };
+		6B6EE4E52084C3C000F70470 /* sonic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sonic.cpp; sourceTree = "<group>"; };
+		6B6EE4E72084C3C000F70470 /* mbrowrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbrowrap.h; sourceTree = "<group>"; };
+		6B6EE4E82084C3C000F70470 /* dictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dictionary.cpp; sourceTree = "<group>"; };
+		6B6EE4E92084C3C000F70470 /* synth_mbrola.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = synth_mbrola.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+		6B5E0C912080B69100010F07 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
-				13B850510E461FA80058FDC2 /* libsqlite3.dylib in Frameworks */,
-				C68ADDED128AA3E9001FFD4C /* QuartzCore.framework in Frameworks */,
-				C6B01E51128D7C3D0025D0A0 /* MessageUI.framework in Frameworks */,
-				C6F38BC0128E92B400B4535A /* AudioToolbox.framework in Frameworks */,
-				C6F38BC3128E92C300B4535A /* MediaPlayer.framework in Frameworks */,
-				C6F38BC6128E92CE00B4535A /* MessageUI.framework in Frameworks */,
+				6B45C9022084BB630060AF55 /* AudioToolbox.framework in Frameworks */,
+				6B5E0CD32080DEA800010F07 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		6B5E0C8B2080B69100010F07 = {
 			isa = PBXGroup;
 			children = (
-				C68ADDDD128AA3B2001FFD4C /* ShadowedTableView.h */,
-				C68ADDDE128AA3B2001FFD4C /* ShadowedTableView.m */,
-				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
-				28C286E00D94DF7D0034E888 /* RootViewController.m */,
-				139F57070E44FC6C009EA047 /* DetailViewController.h */,
-				139F57080E44FC6C009EA047 /* DetailViewController.m */,
-				139F57B90E450A23009EA047 /* BookmarkViewController.h */,
-				139F57BA0E450A23009EA047 /* BookmarkViewController.m */,
-				13B84F130E45C81E0058FDC2 /* BookmarkDetailViewController.h */,
-				13B84F140E45C81E0058FDC2 /* BookmarkDetailViewController.m */,
-				C6947A4A1525CFA700497D6B /* PTeSpeak.h */,
-				C6947A4B1525CFA700497D6B /* PTeSpeak.m */,
+				6B5E0C962080B69100010F07 /* lingeo */,
+				6B5E0CB12080BB5300010F07 /* libraries */,
+				6B5E0C952080B69100010F07 /* Products */,
+				6B5E0CCA2080BB9000010F07 /* Frameworks */,
 			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
-		13B8503D0E461E3E0058FDC2 /* DB */ = {
+		6B5E0C952080B69100010F07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D3623240D0F684500981E51 /* LinGEOAppDelegate.h */,
-				1D3623250D0F684500981E51 /* LinGEOAppDelegate.m */,
-				13FB7BC20E44DB560081C08E /* EngGeo.h */,
-				13FB7BC30E44DB560081C08E /* EngGeo.m */,
-				1311061E0E46676500ADB761 /* Bookmark.h */,
-				1311061F0E46676500ADB761 /* Bookmark.m */,
-			);
-			name = DB;
-			sourceTree = "<group>";
-		};
-		19C28FACFE9D520D11CA2CBB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1D6058910D05DD3D006BFB54 /* LinGEO.app */,
+				6B5E0C942080B69100010F07 /* LinGEO.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+		6B5E0C962080B69100010F07 /* lingeo */ = {
 			isa = PBXGroup;
 			children = (
-				C69479931524F77F00497D6B /* espeak */,
-				C69479911524F73F00497D6B /* espeak-data */,
-				C6F38C4F128E948600B4535A /* TouchJSON */,
-				13B8503D0E461E3E0058FDC2 /* DB */,
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
-				C6947A271525965C00497D6B /* iPad */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
-				19C28FACFE9D520D11CA2CBB /* Products */,
+				6B0A34362084C473000C560D /* espeak-data */,
+				6B6EE4BB2084C3C000F70470 /* espeak-src */,
+				6B45C8EE208494B60060AF55 /* Debouncer.swift */,
+				6B5E0C972080B69100010F07 /* AppDelegate.swift */,
+				6B5E0C9C2080B69100010F07 /* MasterViewController.swift */,
+				6B5E0C9E2080B69100010F07 /* DetailViewController.swift */,
+				6B32363B208732520009696A /* BookmarksTableViewController.swift */,
+				6B5E0CA02080B69100010F07 /* Main.storyboard */,
+				6B5E0CA32080B69200010F07 /* Assets.xcassets */,
+				6B5E0CA52080B69200010F07 /* LaunchScreen.storyboard */,
+				6B5E0CA82080B69200010F07 /* Info.plist */,
+				6B5E0CAE2080B74700010F07 /* ilingoka.sqlite */,
+				6B45C8FE2084BB460060AF55 /* LinGEO-Bridging-Header.h */,
+				6B45C94A2084BC8F0060AF55 /* PTeSpeak.h */,
+				6B45C9492084BC8F0060AF55 /* PTeSpeak.m */,
+				6B323643208732B90009696A /* Bookmarks.xcdatamodeld */,
 			);
-			name = CustomTemplate;
+			path = lingeo;
 			sourceTree = "<group>";
 		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+		6B5E0CB12080BB5300010F07 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
-				28A0AAE50D9B0CCF005BE974 /* LinGEO_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
+				6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */,
 			);
-			name = "Other Sources";
+			path = libraries;
 			sourceTree = "<group>";
 		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
+		6B5E0CB32080BB6C00010F07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C6C991F4162A931100B642BE /* Default-568h@2x.png */,
-				C6947A481525C16400497D6B /* Default-Landscape@2x~ipad.png */,
-				C6947A461525C15F00497D6B /* Default-Portrait@2x~ipad.png */,
-				C6947A3E1525BF5D00497D6B /* Default-Landscape~ipad.png */,
-				C6947A381525BF0300497D6B /* Default-Portrait~ipad.png */,
-				C6947A321525A0D900497D6B /* Icon~ipad@2x.png */,
-				C6947A301525A07D00497D6B /* Icon~ipad.png */,
-				C606177A106784870090295B /* Default.png */,
-				C6947A2A15259E2900497D6B /* Default@2x.png */,
-				C69479D81525045C00497D6B /* Stop-icon.png */,
-				C69479D61524FF8500497D6B /* Play-icon.png */,
-				C6B01ABF128BEDEA0025D0A0 /* background.png */,
-				C6E9FFA5105AAA4B001078EB /* Icon.png */,
-				C694798B1524F24400497D6B /* Icon@2x.png */,
-				131106070E465B9C00ADB761 /* ilingoka.sqlite */,
-				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
-				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* Info.plist */,
-				139F57040E44FC37009EA047 /* DetailView.xib */,
-				139F57B60E450A0B009EA047 /* BookmarkView.xib */,
-				13B84F760E45CCFE0058FDC2 /* BookmarkDetailView.xib */,
-				C6538937128DA68C00C8FC07 /* Entitlements.plist */,
+				6B5E0CBD2080BB6C00010F07 /* SQLite.framework */,
+				6B5E0CBF2080BB6C00010F07 /* SQLiteTests iOS.xctest */,
+				6B5E0CC12080BB6C00010F07 /* SQLite.framework */,
+				6B5E0CC32080BB6C00010F07 /* SQLiteTests Mac.xctest */,
+				6B5E0CC52080BB6C00010F07 /* SQLite.framework */,
+				6B5E0CC72080BB6C00010F07 /* SQLiteTests tvOS.xctest */,
+				6B5E0CC92080BB6C00010F07 /* SQLite.framework */,
 			);
-			name = Resources;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+		6B5E0CCA2080BB9000010F07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C68ADDEC128AA3E9001FFD4C /* QuartzCore.framework */,
-				C6B01E50128D7C3D0025D0A0 /* MessageUI.framework */,
-				13B850500E461FA80058FDC2 /* libsqlite3.dylib */,
-				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
-				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
-				1D30AB110D05D00D00671497 /* Foundation.framework */,
-				C6F38BBF128E92B400B4535A /* AudioToolbox.framework */,
-				C6F38BC2128E92C300B4535A /* MediaPlayer.framework */,
-				C6F38BC5128E92CE00B4535A /* MessageUI.framework */,
+				6B45C9012084BB630060AF55 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C69479931524F77F00497D6B /* espeak */ = {
+		6B6EE4BB2084C3C000F70470 /* espeak-src */ = {
 			isa = PBXGroup;
 			children = (
-				C69479981524F82A00497D6B /* compiledict.cpp */,
-				C69479991524F82A00497D6B /* debug.cpp */,
-				C694799A1524F82A00497D6B /* debug.h */,
-				C694799B1524F82A00497D6B /* dictionary.cpp */,
-				C694799C1524F82A00497D6B /* espeak_command.cpp */,
-				C694799D1524F82A00497D6B /* espeak_command.h */,
-				C694799E1524F82A00497D6B /* event.cpp */,
-				C694799F1524F82A00497D6B /* event.h */,
-				C69479A01524F82A00497D6B /* fifo.cpp */,
-				C69479A11524F82A00497D6B /* fifo.h */,
-				C69479A21524F82A00497D6B /* intonation.cpp */,
-				C69479A31524F82A00497D6B /* klatt.cpp */,
-				C69479A41524F82A00497D6B /* klatt.h */,
-				C69479A51524F82A00497D6B /* mbrowrap.cpp */,
-				C69479A61524F82A00497D6B /* mbrowrap.h */,
-				C69479A71524F82A00497D6B /* numbers.cpp */,
-				C69479A81524F82A00497D6B /* phoneme.h */,
-				C69479A91524F82A00497D6B /* phonemelist.cpp */,
-				C69479AA1524F82A00497D6B /* readclause.cpp */,
-				C69479AB1524F82A00497D6B /* setlengths.cpp */,
-				C69479AC1524F82A00497D6B /* sintab.h */,
-				C69479AD1524F82A00497D6B /* sonic.cpp */,
-				C69479AE1524F82A00497D6B /* sonic.h */,
-				C69479AF1524F82A00497D6B /* speak_lib.cpp */,
-				C69479B01524F82A00497D6B /* speak_lib.h */,
-				C69479B11524F82A00497D6B /* speech.h */,
-				C69479B21524F82A00497D6B /* StdAfx.h */,
-				C69479B31524F82A00497D6B /* synth_mbrola.cpp */,
-				C69479B41524F82A00497D6B /* synthdata.cpp */,
-				C69479B51524F82A00497D6B /* synthesize.cpp */,
-				C69479B61524F82A00497D6B /* synthesize.h */,
-				C69479B71524F82A00497D6B /* tr_languages.cpp */,
-				C69479B81524F82A00497D6B /* translate.cpp */,
-				C69479B91524F82A00497D6B /* translate.h */,
-				C69479BA1524F82A00497D6B /* voice.h */,
-				C69479BB1524F82A00497D6B /* voices.cpp */,
-				C69479BC1524F82A00497D6B /* wave.cpp */,
-				C69479BD1524F82A00497D6B /* wave.h */,
-				C69479BE1524F82A00497D6B /* wavegen.cpp */,
+				6B6EE4BC2084C3C000F70470 /* speak_lib.cpp */,
+				6B6EE4BD2084C3C000F70470 /* portaudio18.h */,
+				6B6EE4BE2084C3C000F70470 /* fifo.cpp */,
+				6B6EE4BF2084C3C000F70470 /* sintab.h */,
+				6B6EE4C02084C3C000F70470 /* wave_sada.cpp */,
+				6B6EE4C12084C3C000F70470 /* wave_pulse.cpp */,
+				6B6EE4C22084C3C000F70470 /* fifo.h */,
+				6B6EE4C32084C3C000F70470 /* synthesize.cpp */,
+				6B6EE4C42084C3C000F70470 /* compiledict.cpp */,
+				6B6EE4C52084C3C000F70470 /* mbrowrap.cpp */,
+				6B6EE4C62084C3C000F70470 /* debug.h */,
+				6B6EE4C72084C3C000F70470 /* synthdata.cpp */,
+				6B6EE4C82084C3C000F70470 /* voices.cpp */,
+				6B6EE4C92084C3C000F70470 /* StdAfx.h */,
+				6B6EE4CA2084C3C000F70470 /* synthesize.h */,
+				6B6EE4CB2084C3C000F70470 /* espeak_command.h */,
+				6B6EE4CC2084C3C000F70470 /* event.h */,
+				6B6EE4CD2084C3C000F70470 /* wave.cpp */,
+				6B6EE4CE2084C3C000F70470 /* translate.h */,
+				6B6EE4CF2084C3C000F70470 /* sonic.h */,
+				6B6EE4D02084C3C000F70470 /* phoneme.h */,
+				6B6EE4D12084C3C000F70470 /* portaudio.h */,
+				6B6EE4D22084C3C000F70470 /* readclause.cpp */,
+				6B6EE4D32084C3C000F70470 /* phonemelist.cpp */,
+				6B6EE4D42084C3C000F70470 /* tr_languages.cpp */,
+				6B6EE4D52084C3C000F70470 /* wavegen.cpp */,
+				6B6EE4D62084C3C000F70470 /* speak_lib.h */,
+				6B6EE4D72084C3C000F70470 /* speech.h */,
+				6B6EE4D82084C3C000F70470 /* setlengths.cpp */,
+				6B6EE4D92084C3C000F70470 /* klatt.cpp */,
+				6B6EE4DA2084C3C000F70470 /* debug.cpp */,
+				6B6EE4DB2084C3C000F70470 /* intonation.cpp */,
+				6B6EE4DD2084C3C000F70470 /* translate.cpp */,
+				6B6EE4DE2084C3C000F70470 /* numbers.cpp */,
+				6B6EE4DF2084C3C000F70470 /* espeak_command.cpp */,
+				6B6EE4E02084C3C000F70470 /* portaudio19.h */,
+				6B6EE4E12084C3C000F70470 /* voice.h */,
+				6B6EE4E22084C3C000F70470 /* event.cpp */,
+				6B6EE4E32084C3C000F70470 /* wave.h */,
+				6B6EE4E42084C3C000F70470 /* klatt.h */,
+				6B6EE4E52084C3C000F70470 /* sonic.cpp */,
+				6B6EE4E72084C3C000F70470 /* mbrowrap.h */,
+				6B6EE4E82084C3C000F70470 /* dictionary.cpp */,
+				6B6EE4E92084C3C000F70470 /* synth_mbrola.cpp */,
 			);
-			name = espeak;
-			sourceTree = "<group>";
-		};
-		C6947A271525965C00497D6B /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-				C6947A281525965D00497D6B /* MainWindow-iPad.xib */,
-			);
-			name = iPad;
-			sourceTree = "<group>";
-		};
-		C6F38C4F128E948600B4535A /* TouchJSON */ = {
-			isa = PBXGroup;
-			children = (
-				C6F38C50128E948600B4535A /* CDataScanner.h */,
-				C6F38C51128E948600B4535A /* CDataScanner.m */,
-				C6F38C52128E948600B4535A /* Extensions */,
-				C6F38C5B128E948600B4535A /* JSON */,
-			);
-			path = TouchJSON;
-			sourceTree = "<group>";
-		};
-		C6F38C52128E948600B4535A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C6F38C53128E948600B4535A /* CDataScanner_Extensions.h */,
-				C6F38C54128E948600B4535A /* CDataScanner_Extensions.m */,
-				C6F38C55128E948600B4535A /* NSCharacterSet_Extensions.h */,
-				C6F38C56128E948600B4535A /* NSCharacterSet_Extensions.m */,
-				C6F38C57128E948600B4535A /* NSDictionary_JSONExtensions.h */,
-				C6F38C58128E948600B4535A /* NSDictionary_JSONExtensions.m */,
-				C6F38C59128E948600B4535A /* NSScanner_Extensions.h */,
-				C6F38C5A128E948600B4535A /* NSScanner_Extensions.m */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		C6F38C5B128E948600B4535A /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				C6F38C5C128E948600B4535A /* CJSONDataSerializer.h */,
-				C6F38C5D128E948600B4535A /* CJSONDataSerializer.m */,
-				C6F38C5E128E948600B4535A /* CJSONDeserializer.h */,
-				C6F38C5F128E948600B4535A /* CJSONDeserializer.m */,
-				C6F38C60128E948600B4535A /* CJSONScanner.h */,
-				C6F38C61128E948600B4535A /* CJSONScanner.m */,
-				C6F38C62128E948600B4535A /* CJSONSerializer.h */,
-				C6F38C63128E948600B4535A /* CJSONSerializer.m */,
-				C6F38C64128E948600B4535A /* CSerializedJSONData.h */,
-				C6F38C65128E948600B4535A /* CSerializedJSONData.m */,
-			);
-			path = JSON;
+			name = "espeak-src";
+			path = "espeak/espeak-src";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* LinGEO */ = {
+		6B5E0C932080B69100010F07 /* LinGEO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "LinGEO" */;
+			buildConfigurationList = 6B5E0CAB2080B69200010F07 /* Build configuration list for PBXNativeTarget "LinGEO" */;
 			buildPhases = (
-				1D60588D0D05DD3D006BFB54 /* Resources */,
-				1D60588E0D05DD3D006BFB54 /* Sources */,
-				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				6B5E0C902080B69100010F07 /* Sources */,
+				6B5E0C912080B69100010F07 /* Frameworks */,
+				6B5E0C922080B69100010F07 /* Resources */,
+				6B5E0CD72080DEA800010F07 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6B5E0CD62080DEA800010F07 /* PBXTargetDependency */,
 			);
 			name = LinGEO;
-			productName = LinGEO;
-			productReference = 1D6058910D05DD3D006BFB54 /* LinGEO.app */;
+			productName = lingeo;
+			productReference = 6B5E0C942080B69100010F07 /* LinGEO.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		29B97313FDCFA39411CA2CEA /* Project object */ = {
+		6B5E0C8C2080B69100010F07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = LD;
+				TargetAttributes = {
+					6B5E0C932080B69100010F07 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LinGEO" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 1;
+			buildConfigurationList = 6B5E0C8F2080B69100010F07 /* Build configuration list for PBXProject "lingeo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
 				en,
+				Base,
 			);
-			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			mainGroup = 6B5E0C8B2080B69100010F07;
+			productRefGroup = 6B5E0C952080B69100010F07 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6B5E0CB32080BB6C00010F07 /* Products */;
+					ProjectRef = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* LinGEO */,
+				6B5E0C932080B69100010F07 /* LinGEO */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		6B5E0CBD2080BB6C00010F07 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = 6B5E0CBC2080BB6C00010F07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B5E0CBF2080BB6C00010F07 /* SQLiteTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests iOS.xctest";
+			remoteRef = 6B5E0CBE2080BB6C00010F07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B5E0CC12080BB6C00010F07 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = 6B5E0CC02080BB6C00010F07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B5E0CC32080BB6C00010F07 /* SQLiteTests Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests Mac.xctest";
+			remoteRef = 6B5E0CC22080BB6C00010F07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B5E0CC52080BB6C00010F07 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = 6B5E0CC42080BB6C00010F07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B5E0CC72080BB6C00010F07 /* SQLiteTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests tvOS.xctest";
+			remoteRef = 6B5E0CC62080BB6C00010F07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B5E0CC92080BB6C00010F07 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = 6B5E0CC82080BB6C00010F07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
-		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+		6B5E0C922080B69100010F07 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
-				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
-				139F57050E44FC37009EA047 /* DetailView.xib in Resources */,
-				139F57B70E450A0B009EA047 /* BookmarkView.xib in Resources */,
-				13B84F770E45CCFE0058FDC2 /* BookmarkDetailView.xib in Resources */,
-				131106080E465B9C00ADB761 /* ilingoka.sqlite in Resources */,
-				C6E9FFA6105AAA4B001078EB /* Icon.png in Resources */,
-				C6B01AC0128BEDEA0025D0A0 /* background.png in Resources */,
-				C6538938128DA68C00C8FC07 /* Entitlements.plist in Resources */,
-				C69479921524F73F00497D6B /* espeak-data in Resources */,
-				C69479D71524FF8500497D6B /* Play-icon.png in Resources */,
-				C69479D91525045C00497D6B /* Stop-icon.png in Resources */,
-				C69479DA15250B4500497D6B /* Icon@2x.png in Resources */,
-				C6947A291525965D00497D6B /* MainWindow-iPad.xib in Resources */,
-				C6947A311525A07D00497D6B /* Icon~ipad.png in Resources */,
-				C6947A331525A0D900497D6B /* Icon~ipad@2x.png in Resources */,
-				C6947A421525C03900497D6B /* Default.png in Resources */,
-				C6947A431525C03B00497D6B /* Default@2x.png in Resources */,
-				C6947A441525C15700497D6B /* Default-Portrait~ipad.png in Resources */,
-				C6947A451525C15900497D6B /* Default-Landscape~ipad.png in Resources */,
-				C6947A471525C15F00497D6B /* Default-Portrait@2x~ipad.png in Resources */,
-				C6947A491525C16400497D6B /* Default-Landscape@2x~ipad.png in Resources */,
-				C6C991F5162A931100B642BE /* Default-568h@2x.png in Resources */,
+				6B5E0CA72080B69200010F07 /* LaunchScreen.storyboard in Resources */,
+				6B5E0CAF2080B74700010F07 /* ilingoka.sqlite in Resources */,
+				6B5E0CA42080B69200010F07 /* Assets.xcassets in Resources */,
+				6B5E0CA22080B69100010F07 /* Main.storyboard in Resources */,
+				6B0A34372084C473000C560D /* espeak-data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+		6B5E0C902080B69100010F07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* LinGEOAppDelegate.m in Sources */,
-				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
-				13FB7BC40E44DB560081C08E /* EngGeo.m in Sources */,
-				139F57090E44FC6C009EA047 /* DetailViewController.m in Sources */,
-				139F57BB0E450A23009EA047 /* BookmarkViewController.m in Sources */,
-				13B84F150E45C81E0058FDC2 /* BookmarkDetailViewController.m in Sources */,
-				131106200E46676500ADB761 /* Bookmark.m in Sources */,
-				C68ADDDF128AA3B2001FFD4C /* ShadowedTableView.m in Sources */,
-				C6F38C66128E948600B4535A /* CDataScanner.m in Sources */,
-				C6F38C67128E948600B4535A /* CDataScanner_Extensions.m in Sources */,
-				C6F38C68128E948600B4535A /* NSCharacterSet_Extensions.m in Sources */,
-				C6F38C69128E948600B4535A /* NSDictionary_JSONExtensions.m in Sources */,
-				C6F38C6A128E948600B4535A /* NSScanner_Extensions.m in Sources */,
-				C6F38C6B128E948600B4535A /* CJSONDataSerializer.m in Sources */,
-				C6F38C6C128E948600B4535A /* CJSONDeserializer.m in Sources */,
-				C6F38C6D128E948600B4535A /* CJSONScanner.m in Sources */,
-				C6F38C6E128E948600B4535A /* CJSONSerializer.m in Sources */,
-				C6F38C6F128E948600B4535A /* CSerializedJSONData.m in Sources */,
-				C69479BF1524F82A00497D6B /* compiledict.cpp in Sources */,
-				C69479C01524F82A00497D6B /* debug.cpp in Sources */,
-				C69479C11524F82A00497D6B /* dictionary.cpp in Sources */,
-				C69479C21524F82A00497D6B /* espeak_command.cpp in Sources */,
-				C69479C31524F82A00497D6B /* event.cpp in Sources */,
-				C69479C41524F82A00497D6B /* fifo.cpp in Sources */,
-				C69479C51524F82A00497D6B /* intonation.cpp in Sources */,
-				C69479C61524F82A00497D6B /* klatt.cpp in Sources */,
-				C69479C71524F82A00497D6B /* mbrowrap.cpp in Sources */,
-				C69479C81524F82A00497D6B /* numbers.cpp in Sources */,
-				C69479C91524F82A00497D6B /* phonemelist.cpp in Sources */,
-				C69479CA1524F82A00497D6B /* readclause.cpp in Sources */,
-				C69479CB1524F82A00497D6B /* setlengths.cpp in Sources */,
-				C69479CC1524F82A00497D6B /* sonic.cpp in Sources */,
-				C69479CD1524F82A00497D6B /* speak_lib.cpp in Sources */,
-				C69479CE1524F82A00497D6B /* synth_mbrola.cpp in Sources */,
-				C69479CF1524F82A00497D6B /* synthdata.cpp in Sources */,
-				C69479D01524F82A00497D6B /* synthesize.cpp in Sources */,
-				C69479D11524F82A00497D6B /* tr_languages.cpp in Sources */,
-				C69479D21524F82A00497D6B /* translate.cpp in Sources */,
-				C69479D31524F82A00497D6B /* voices.cpp in Sources */,
-				C69479D41524F82A00497D6B /* wave.cpp in Sources */,
-				C69479D51524F82A00497D6B /* wavegen.cpp in Sources */,
-				C6947A4C1525CFA700497D6B /* PTeSpeak.m in Sources */,
+				6B6EE4ED2084C3C000F70470 /* wave_pulse.cpp in Sources */,
+				6B6EE4F92084C3C000F70470 /* klatt.cpp in Sources */,
+				6B32363C208732520009696A /* BookmarksTableViewController.swift in Sources */,
+				6B5E0C982080B69100010F07 /* AppDelegate.swift in Sources */,
+				6B6EE4F22084C3C000F70470 /* voices.cpp in Sources */,
+				6B6EE4FD2084C3C000F70470 /* translate.cpp in Sources */,
+				6B6EE4EC2084C3C000F70470 /* wave_sada.cpp in Sources */,
+				6B6EE4FB2084C3C000F70470 /* intonation.cpp in Sources */,
+				6B6EE4F82084C3C000F70470 /* setlengths.cpp in Sources */,
+				6B6EE4F52084C3C000F70470 /* phonemelist.cpp in Sources */,
+				6B6EE4EF2084C3C000F70470 /* compiledict.cpp in Sources */,
+				6B6EE4EE2084C3C000F70470 /* synthesize.cpp in Sources */,
+				6B45C8EF208494B60060AF55 /* Debouncer.swift in Sources */,
+				6B5E0C9D2080B69100010F07 /* MasterViewController.swift in Sources */,
+				6B6EE4F42084C3C000F70470 /* readclause.cpp in Sources */,
+				6B6EE4F32084C3C000F70470 /* wave.cpp in Sources */,
+				6B6EE4F02084C3C000F70470 /* mbrowrap.cpp in Sources */,
+				6B6EE4EA2084C3C000F70470 /* speak_lib.cpp in Sources */,
+				6B6EE5042084C3C000F70470 /* synth_mbrola.cpp in Sources */,
+				6B6EE5012084C3C000F70470 /* sonic.cpp in Sources */,
+				6B5E0C9F2080B69100010F07 /* DetailViewController.swift in Sources */,
+				6B6EE5032084C3C000F70470 /* dictionary.cpp in Sources */,
+				6B6EE4FA2084C3C000F70470 /* debug.cpp in Sources */,
+				6B323645208732B90009696A /* Bookmarks.xcdatamodeld in Sources */,
+				6B6EE4F12084C3C000F70470 /* synthdata.cpp in Sources */,
+				6B6EE4FF2084C3C000F70470 /* espeak_command.cpp in Sources */,
+				6B6EE4EB2084C3C000F70470 /* fifo.cpp in Sources */,
+				6B6EE5002084C3C000F70470 /* event.cpp in Sources */,
+				6B6EE4F72084C3C000F70470 /* wavegen.cpp in Sources */,
+				6B6EE4FE2084C3C000F70470 /* numbers.cpp in Sources */,
+				6B6EE4F62084C3C000F70470 /* tr_languages.cpp in Sources */,
+				6B0A34382084C5C9000C560D /* PTeSpeak.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6B5E0CD62080DEA800010F07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite iOS";
+			targetProxy = 6B5E0CD52080DEA800010F07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B5E0CA02080B69100010F07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B5E0CA12080B69100010F07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B5E0CA52080B69200010F07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B5E0CA62080B69200010F07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		1D6058940D05DD3E006BFB54 /* Debug */ = {
+		6B5E0CA92080B69200010F07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
-				CODE_SIGN_ENTITLEMENTS = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lasha Dolidze";
-				COPY_PHASE_STRIP = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = LinGEO_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LIBRARY_SEARCH_PATHS = (
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
-					"\"$(SRCROOT)/AdMob\"",
 				);
-				PRODUCT_NAME = LinGEO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CC74C7A6-C8B5-4EA5-96F1-876FB9A850A8";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		1D6058950D05DD3E006BFB54 /* Release */ = {
+		6B5E0CAA2080B69200010F07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
-				CODE_SIGN_ENTITLEMENTS = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lasha Dolidze";
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = LinGEO_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/AdMob\"",
-				);
-				PRODUCT_NAME = LinGEO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CC74C7A6-C8B5-4EA5-96F1-876FB9A850A8";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		C01FCF4F08A954540054247B /* Debug */ = {
+		6B5E0CAC2080B69200010F07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_TEAM = N43S8JF6JT;
+				INFOPLIST_FILE = lingeo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
 				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lasha Dolidze (K49Y2SHJZG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lasha Dolidze";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "E18DD1D0-2C75-4CFE-9FBE-AE34738B538C";
-				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
-				SDKROOT = iphoneos6.0;
-				VALID_ARCHS = "armv7 armv7s";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ioseb.lingeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "lingeo/LinGEO-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		C01FCF5008A954540054247B /* Release */ = {
+		6B5E0CAD2080B69200010F07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_TEAM = N43S8JF6JT;
+				INFOPLIST_FILE = lingeo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
 				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Lasha Dolidze";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lasha Dolidze";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = LinGEO;
-				PROVISIONING_PROFILE = "CC74C7A6-C8B5-4EA5-96F1-876FB9A850A8";
-				SDKROOT = iphoneos6.0;
-				VALID_ARCHS = "armv7 armv7s";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ioseb.lingeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "lingeo/LinGEO-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
-		};
-		C64F7DC1105E638300A4DFEE /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Lasha Dolidze";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lasha Dolidze";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = LinGEO;
-				PROVISIONING_PROFILE = "CC74C7A6-C8B5-4EA5-96F1-876FB9A850A8";
-				SDKROOT = iphoneos6.0;
-				VALID_ARCHS = "armv7 armv7s";
-			};
-			name = Distribution;
-		};
-		C64F7DC2105E638300A4DFEE /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
-				CODE_SIGN_ENTITLEMENTS = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lasha Dolidze";
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = LinGEO_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/AdMob\"",
-				);
-				PRODUCT_NAME = LinGEO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CC74C7A6-C8B5-4EA5-96F1-876FB9A850A8";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s";
-			};
-			name = Distribution;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "LinGEO" */ = {
+		6B5E0C8F2080B69100010F07 /* Build configuration list for PBXProject "lingeo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D6058940D05DD3E006BFB54 /* Debug */,
-				1D6058950D05DD3E006BFB54 /* Release */,
-				C64F7DC2105E638300A4DFEE /* Distribution */,
+				6B5E0CA92080B69200010F07 /* Debug */,
+				6B5E0CAA2080B69200010F07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LinGEO" */ = {
+		6B5E0CAB2080B69200010F07 /* Build configuration list for PBXNativeTarget "LinGEO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C01FCF4F08A954540054247B /* Debug */,
-				C01FCF5008A954540054247B /* Release */,
-				C64F7DC1105E638300A4DFEE /* Distribution */,
+				6B5E0CAC2080B69200010F07 /* Debug */,
+				6B5E0CAD2080B69200010F07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6B323643208732B90009696A /* Bookmarks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6B323644208732B90009696A /* Bookmarks.xcdatamodel */,
+			);
+			currentVersion = 6B323644208732B90009696A /* Bookmarks.xcdatamodel */;
+			path = Bookmarks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+	rootObject = 6B5E0C8C2080B69100010F07 /* Project object */;
 }

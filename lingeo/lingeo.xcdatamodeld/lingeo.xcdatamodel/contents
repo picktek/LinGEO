@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ENG" representedClassName="ENG" codeGenerationType="class">
+        <attribute name="eng" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="transcription" attributeType="String" syncable="YES"/>
+        <attribute name="type" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="geo_link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GEO_ENG" inverseName="eng_link" inverseEntity="GEO_ENG" syncable="YES"/>
+        <relationship name="type_link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TYPES" inverseName="eng_link" inverseEntity="TYPES" syncable="YES"/>
+        <fetchIndex name="eng_index">
+            <fetchIndexElement property="eng" type="Binary" order="ascending"/>
+            <fetchIndexElement property="id" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+        <userInfo/>
+    </entity>
+    <entity name="GEO" representedClassName="GEO" syncable="YES" codeGenerationType="class">
+        <attribute name="geo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="eng_link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GEO_ENG" inverseName="geo_link" inverseEntity="GEO_ENG" syncable="YES"/>
+        <relationship name="type_link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TYPES" inverseName="geo_link" inverseEntity="TYPES" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="GEO_ENG" representedClassName="GEO_ENG" syncable="YES" codeGenerationType="class">
+        <attribute name="eng_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="geo_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="eng_link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ENG" inverseName="geo_link" inverseEntity="ENG" syncable="YES"/>
+        <relationship name="geo_link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GEO" inverseName="eng_link" inverseEntity="GEO" syncable="YES"/>
+        <relationship name="type_link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TYPES" inverseName="geo_eng_link" inverseEntity="TYPES" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="eng_id"/>
+                <constraint value="geo_id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="TYPES" representedClassName="TYPES" syncable="YES" codeGenerationType="class">
+        <attribute name="abbr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eng_link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ENG" inverseName="type_link" inverseEntity="ENG" syncable="YES"/>
+        <relationship name="geo_eng_link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GEO_ENG" inverseName="type_link" inverseEntity="GEO_ENG" syncable="YES"/>
+        <relationship name="geo_link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GEO" inverseName="type_link" inverseEntity="GEO" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="ENG" positionX="187" positionY="122" width="128" height="133"/>
+        <element name="GEO" positionX="304" positionY="459" width="128" height="118"/>
+        <element name="GEO_ENG" positionX="27" positionY="324" width="128" height="133"/>
+        <element name="TYPES" positionX="711" positionY="207" width="128" height="133"/>
+    </elements>
+</model>

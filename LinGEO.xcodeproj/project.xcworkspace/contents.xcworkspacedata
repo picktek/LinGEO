@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Workspace>
+<Workspace
+   version = "1.0">
    <FileRef
-      location = "self:LinGEO.xcodeproj">
+      location = "self:lingeo.xcodeproj">
    </FileRef>
 </Workspace>
