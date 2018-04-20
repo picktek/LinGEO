@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var syncWithCloud:Debouncer!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        syncWithCloud = Debouncer(delay: 1) {
+        syncWithCloud = Debouncer(delay: 5) {
             self.syncWithCloudRaw()
         }
         
@@ -92,17 +92,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let migrationKey = UserDefaults.standard.object(forKey: "migration_key") as? String
         var url:URL!
         if(migrationKey != nil) {
-            url = URL(string: "http://lingeo.picktek.org/api/migration/" + migrationKey!)
+            url = URL(string: "https://lingeo.picktek.org/api/migration/" + migrationKey!)
         } else {
-            url = URL(string: "http://lingeo.picktek.org/api/migration")
+            url = URL(string: "https://lingeo.picktek.org/api/migration")
         }
-        print(url!)
+
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
             if(data != nil) {
                 do {
                     let syncData = try JSON(data: data!)
                     if(syncData["total"] > 0) {
-                        for (_,subJson):(String, JSON) in syncData["data"] {
+                        for (_ , subJson):(String, JSON) in syncData["data"] {
                             self.executeMigration(query: subJson["query"].string!, uuid: subJson["uuid"].string!)
                         }
                         self.syncWithCloud.call()
@@ -146,10 +146,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        
+        if(Network.reachability?.isReachableViaWiFi)! {
+            self.syncWithCloud.call()
+        }
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        if(Network.reachability?.isReachableViaWiFi)! {
+            self.syncWithCloud.call()
+        }
     }
     
     // MARK: - Core Data stack
