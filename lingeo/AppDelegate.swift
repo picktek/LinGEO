@@ -8,14 +8,14 @@
 
 import UIKit
 import CoreData
-import SQLite
+import GRDB
 import Toaster
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var db: Connection!
+    var dbPool: DatabasePool!
     var syncWithCloud:Debouncer!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.copyDatabaseIfNeeded()
 
         do {
-            db = try self.getDB()
+            dbPool = try self.getDB()
             Network.reachability = try Reachability(hostname: "www.apple.com")
             if(Network.reachability?.isReachableViaWiFi)! {
                 self.syncWithCloud.call()
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    public func getDB() throws -> Connection  {
+    public func getDB() throws -> DatabasePool  {
         let fileManager = FileManager.default
         
         let documentsUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
@@ -56,7 +56,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let finalDatabaseURL = documentsUrl.first!.appendingPathComponent("ilingoka.sqlite")
-        return try Connection(finalDatabaseURL.path)
+        if(dbPool == nil ) {
+            dbPool = try DatabasePool(path: finalDatabaseURL.path)
+        }
+        return dbPool
     }
     
     private func copyDatabaseIfNeeded() {
@@ -129,7 +132,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func executeMigration(query:String, uuid:String) {
         print(query, uuid)
         do {
-            try db.execute(query)
+            try dbPool.write { db in
+                try db.execute(query)
+            }
             UserDefaults.standard.set(uuid, forKey: "migration_key")
         } catch {
             print(error)

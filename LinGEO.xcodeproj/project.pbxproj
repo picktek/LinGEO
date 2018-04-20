@@ -22,8 +22,6 @@
 		6B5E0CA42080B69200010F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5E0CA32080B69200010F07 /* Assets.xcassets */; };
 		6B5E0CA72080B69200010F07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5E0CA52080B69200010F07 /* LaunchScreen.storyboard */; };
 		6B5E0CAF2080B74700010F07 /* ilingoka.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6B5E0CAE2080B74700010F07 /* ilingoka.sqlite */; };
-		6B5E0CD32080DEA800010F07 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5E0CBD2080BB6C00010F07 /* SQLite.framework */; };
-		6B5E0CD42080DEA800010F07 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5E0CBD2080BB6C00010F07 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B6EE4EA2084C3C000F70470 /* speak_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4BC2084C3C000F70470 /* speak_lib.cpp */; };
 		6B6EE4EB2084C3C000F70470 /* fifo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4BE2084C3C000F70470 /* fifo.cpp */; };
 		6B6EE4EC2084C3C000F70470 /* wave_sada.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4C02084C3C000F70470 /* wave_sada.cpp */; };
@@ -49,91 +47,100 @@
 		6B6EE5012084C3C000F70470 /* sonic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4E52084C3C000F70470 /* sonic.cpp */; };
 		6B6EE5032084C3C000F70470 /* dictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4E82084C3C000F70470 /* dictionary.cpp */; };
 		6B6EE5042084C3C000F70470 /* synth_mbrola.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4E92084C3C000F70470 /* synth_mbrola.cpp */; };
-		6B9B72942089D5F300AC8C72 /* Toaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B728F2089D5A900AC8C72 /* Toaster.framework */; };
-		6B9B72952089D5F300AC8C72 /* Toaster.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B728F2089D5A900AC8C72 /* Toaster.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B9B731A2089F3A600AC8C72 /* GRDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B73152089F3A200AC8C72 /* GRDB.framework */; };
+		6B9B731B2089F3A600AC8C72 /* GRDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B73152089F3A200AC8C72 /* GRDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B9B731E2089F3A900AC8C72 /* Toaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B72F92089F39D00AC8C72 /* Toaster.framework */; };
+		6B9B731F2089F3A900AC8C72 /* Toaster.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B72F92089F39D00AC8C72 /* Toaster.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6B5E0CBC2080BB6C00010F07 /* PBXContainerItemProxy */ = {
+		6B9B72F82089F39D00AC8C72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
-			remoteInfo = "SQLite iOS";
-		};
-		6B5E0CBE2080BB6C00010F07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
-			remoteInfo = "SQLiteTests iOS";
-		};
-		6B5E0CC02080BB6C00010F07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
-			remoteInfo = "SQLite Mac";
-		};
-		6B5E0CC22080BB6C00010F07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
-			remoteInfo = "SQLiteTests Mac";
-		};
-		6B5E0CC42080BB6C00010F07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
-			remoteInfo = "SQLite tvOS";
-		};
-		6B5E0CC62080BB6C00010F07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
-			remoteInfo = "SQLiteTests tvOS";
-		};
-		6B5E0CC82080BB6C00010F07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A121AC451CA35C79005A31D1;
-			remoteInfo = "SQLite watchOS";
-		};
-		6B5E0CD52080DEA800010F07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
-			remoteInfo = "SQLite iOS";
-		};
-		6B9B728E2089D5A900AC8C72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */;
+			containerPortal = 6B9B72F22089F39D00AC8C72 /* Toaster.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 03A75E2B1BCF2066002E46C4;
 			remoteInfo = Toaster;
 		};
-		6B9B72902089D5A900AC8C72 /* PBXContainerItemProxy */ = {
+		6B9B72FA2089F39D00AC8C72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */;
+			containerPortal = 6B9B72F22089F39D00AC8C72 /* Toaster.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 03A75E4F1BCF20D4002E46C4;
 			remoteInfo = ToasterDemo;
 		};
-		6B9B72922089D5A900AC8C72 /* PBXContainerItemProxy */ = {
+		6B9B72FC2089F39D00AC8C72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */;
+			containerPortal = 6B9B72F22089F39D00AC8C72 /* Toaster.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C06FC9D11F95A8CC00782082;
 			remoteInfo = ToasterTests;
 		};
-		6B9B72962089D5F300AC8C72 /* PBXContainerItemProxy */ = {
+		6B9B730A2089F3A200AC8C72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */;
+			containerPortal = 6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC3773F319C8CBB3004FCF85;
+			remoteInfo = GRDBOSX;
+		};
+		6B9B730C2089F3A200AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56E5D7F91B4D422D00430942;
+			remoteInfo = GRDBOSXTests;
+		};
+		6B9B730E2089F3A200AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 560C981A1C0E22D300BF8471;
+			remoteInfo = GRDBOSXPerformanceTests;
+		};
+		6B9B73102089F3A200AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56439B501F4CA1DC0066043F;
+			remoteInfo = GRDBOSXPerformanceComparisonTests;
+		};
+		6B9B73122089F3A200AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56553C181C3E906C00522B5C;
+			remoteInfo = GRDBOSXCrashTests;
+		};
+		6B9B73142089F3A200AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56E5D7CA1B4D3FED00430942;
+			remoteInfo = GRDBiOS;
+		};
+		6B9B73162089F3A200AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56E5D7D31B4D3FEE00430942;
+			remoteInfo = GRDBiOSTests;
+		};
+		6B9B73182089F3A200AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 565490A01D5A4798005622CB;
+			remoteInfo = GRDBWatchOS;
+		};
+		6B9B731C2089F3A700AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 56E5D7C91B4D3FED00430942;
+			remoteInfo = GRDBiOS;
+		};
+		6B9B73202089F3A900AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72F22089F39D00AC8C72 /* Toaster.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 03A75E2A1BCF2066002E46C4;
 			remoteInfo = Toaster;
@@ -147,8 +154,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6B5E0CD42080DEA800010F07 /* SQLite.framework in Embed Frameworks */,
-				6B9B72952089D5F300AC8C72 /* Toaster.framework in Embed Frameworks */,
+				6B9B731B2089F3A600AC8C72 /* GRDB.framework in Embed Frameworks */,
+				6B9B731F2089F3A900AC8C72 /* Toaster.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +182,6 @@
 		6B5E0CA62080B69200010F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B5E0CA82080B69200010F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B5E0CAE2080B74700010F07 /* ilingoka.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = ilingoka.sqlite; path = data/ilingoka.sqlite; sourceTree = SOURCE_ROOT; };
-		6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = SQLite/SQLite.xcodeproj; sourceTree = SOURCE_ROOT; };
 		6B6EE4BC2084C3C000F70470 /* speak_lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = speak_lib.cpp; sourceTree = "<group>"; };
 		6B6EE4BD2084C3C000F70470 /* portaudio18.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio18.h; sourceTree = "<group>"; };
 		6B6EE4BE2084C3C000F70470 /* fifo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fifo.cpp; sourceTree = "<group>"; };
@@ -220,7 +226,8 @@
 		6B6EE4E72084C3C000F70470 /* mbrowrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbrowrap.h; sourceTree = "<group>"; };
 		6B6EE4E82084C3C000F70470 /* dictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dictionary.cpp; sourceTree = "<group>"; };
 		6B6EE4E92084C3C000F70470 /* synth_mbrola.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = synth_mbrola.cpp; sourceTree = "<group>"; };
-		6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toaster.xcodeproj; path = Toaster/Toaster.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6B9B72F22089F39D00AC8C72 /* Toaster.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toaster.xcodeproj; path = Toaster/Toaster.xcodeproj; sourceTree = "<group>"; };
+		6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GRDB.xcodeproj; path = GRDB/GRDB.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,8 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B45C9022084BB630060AF55 /* AudioToolbox.framework in Frameworks */,
-				6B9B72942089D5F300AC8C72 /* Toaster.framework in Frameworks */,
-				6B5E0CD32080DEA800010F07 /* SQLite.framework in Frameworks */,
+				6B9B731E2089F3A900AC8C72 /* Toaster.framework in Frameworks */,
+				6B9B731A2089F3A600AC8C72 /* GRDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,24 +290,10 @@
 				6B2AF49D2088D97500A44030 /* SwiftyJSON.swift */,
 				6B45C94A2084BC8F0060AF55 /* PTeSpeak.h */,
 				6B45C9492084BC8F0060AF55 /* PTeSpeak.m */,
-				6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */,
-				6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */,
+				6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */,
+				6B9B72F22089F39D00AC8C72 /* Toaster.xcodeproj */,
 			);
 			path = libraries;
-			sourceTree = "<group>";
-		};
-		6B5E0CB32080BB6C00010F07 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6B5E0CBD2080BB6C00010F07 /* SQLite.framework */,
-				6B5E0CBF2080BB6C00010F07 /* SQLiteTests iOS.xctest */,
-				6B5E0CC12080BB6C00010F07 /* SQLite.framework */,
-				6B5E0CC32080BB6C00010F07 /* SQLiteTests Mac.xctest */,
-				6B5E0CC52080BB6C00010F07 /* SQLite.framework */,
-				6B5E0CC72080BB6C00010F07 /* SQLiteTests tvOS.xctest */,
-				6B5E0CC92080BB6C00010F07 /* SQLite.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6B5E0CCA2080BB9000010F07 /* Frameworks */ = {
@@ -363,12 +356,27 @@
 			path = "espeak/espeak-src";
 			sourceTree = "<group>";
 		};
-		6B9B72832089D5A900AC8C72 /* Products */ = {
+		6B9B72F32089F39D00AC8C72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B9B728F2089D5A900AC8C72 /* Toaster.framework */,
-				6B9B72912089D5A900AC8C72 /* ToasterDemo.app */,
-				6B9B72932089D5A900AC8C72 /* ToasterTests.xctest */,
+				6B9B72F92089F39D00AC8C72 /* Toaster.framework */,
+				6B9B72FB2089F39D00AC8C72 /* ToasterDemo.app */,
+				6B9B72FD2089F39D00AC8C72 /* ToasterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B9B72FF2089F3A100AC8C72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B9B730B2089F3A200AC8C72 /* GRDB.framework */,
+				6B9B730D2089F3A200AC8C72 /* GRDBOSXTests.xctest */,
+				6B9B730F2089F3A200AC8C72 /* GRDBOSXPerformanceTests.xctest */,
+				6B9B73112089F3A200AC8C72 /* GRDBOSXPerformanceComparisonTests.xctest */,
+				6B9B73132089F3A200AC8C72 /* GRDBOSXCrashTests.xctest */,
+				6B9B73152089F3A200AC8C72 /* GRDB.framework */,
+				6B9B73172089F3A200AC8C72 /* GRDBiOSTests.xctest */,
+				6B9B73192089F3A200AC8C72 /* GRDB.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -388,8 +396,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				6B5E0CD62080DEA800010F07 /* PBXTargetDependency */,
-				6B9B72972089D5F300AC8C72 /* PBXTargetDependency */,
+				6B9B731D2089F3A700AC8C72 /* PBXTargetDependency */,
+				6B9B73212089F3A900AC8C72 /* PBXTargetDependency */,
 			);
 			name = LinGEO;
 			productName = lingeo;
@@ -425,12 +433,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 6B5E0CB32080BB6C00010F07 /* Products */;
-					ProjectRef = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+					ProductGroup = 6B9B72FF2089F3A100AC8C72 /* Products */;
+					ProjectRef = 6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */;
 				},
 				{
-					ProductGroup = 6B9B72832089D5A900AC8C72 /* Products */;
-					ProjectRef = 6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */;
+					ProductGroup = 6B9B72F32089F39D00AC8C72 /* Products */;
+					ProjectRef = 6B9B72F22089F39D00AC8C72 /* Toaster.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -441,74 +449,81 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6B5E0CBD2080BB6C00010F07 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 6B5E0CBC2080BB6C00010F07 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6B5E0CBF2080BB6C00010F07 /* SQLiteTests iOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests iOS.xctest";
-			remoteRef = 6B5E0CBE2080BB6C00010F07 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6B5E0CC12080BB6C00010F07 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 6B5E0CC02080BB6C00010F07 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6B5E0CC32080BB6C00010F07 /* SQLiteTests Mac.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests Mac.xctest";
-			remoteRef = 6B5E0CC22080BB6C00010F07 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6B5E0CC52080BB6C00010F07 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 6B5E0CC42080BB6C00010F07 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6B5E0CC72080BB6C00010F07 /* SQLiteTests tvOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests tvOS.xctest";
-			remoteRef = 6B5E0CC62080BB6C00010F07 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6B5E0CC92080BB6C00010F07 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 6B5E0CC82080BB6C00010F07 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6B9B728F2089D5A900AC8C72 /* Toaster.framework */ = {
+		6B9B72F92089F39D00AC8C72 /* Toaster.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Toaster.framework;
-			remoteRef = 6B9B728E2089D5A900AC8C72 /* PBXContainerItemProxy */;
+			remoteRef = 6B9B72F82089F39D00AC8C72 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6B9B72912089D5A900AC8C72 /* ToasterDemo.app */ = {
+		6B9B72FB2089F39D00AC8C72 /* ToasterDemo.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = ToasterDemo.app;
-			remoteRef = 6B9B72902089D5A900AC8C72 /* PBXContainerItemProxy */;
+			remoteRef = 6B9B72FA2089F39D00AC8C72 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6B9B72932089D5A900AC8C72 /* ToasterTests.xctest */ = {
+		6B9B72FD2089F39D00AC8C72 /* ToasterTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ToasterTests.xctest;
-			remoteRef = 6B9B72922089D5A900AC8C72 /* PBXContainerItemProxy */;
+			remoteRef = 6B9B72FC2089F39D00AC8C72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B730B2089F3A200AC8C72 /* GRDB.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDB.framework;
+			remoteRef = 6B9B730A2089F3A200AC8C72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B730D2089F3A200AC8C72 /* GRDBOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBOSXTests.xctest;
+			remoteRef = 6B9B730C2089F3A200AC8C72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B730F2089F3A200AC8C72 /* GRDBOSXPerformanceTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBOSXPerformanceTests.xctest;
+			remoteRef = 6B9B730E2089F3A200AC8C72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B73112089F3A200AC8C72 /* GRDBOSXPerformanceComparisonTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBOSXPerformanceComparisonTests.xctest;
+			remoteRef = 6B9B73102089F3A200AC8C72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B73132089F3A200AC8C72 /* GRDBOSXCrashTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBOSXCrashTests.xctest;
+			remoteRef = 6B9B73122089F3A200AC8C72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B73152089F3A200AC8C72 /* GRDB.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDB.framework;
+			remoteRef = 6B9B73142089F3A200AC8C72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B73172089F3A200AC8C72 /* GRDBiOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRDBiOSTests.xctest;
+			remoteRef = 6B9B73162089F3A200AC8C72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B73192089F3A200AC8C72 /* GRDB.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDB.framework;
+			remoteRef = 6B9B73182089F3A200AC8C72 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -573,15 +588,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6B5E0CD62080DEA800010F07 /* PBXTargetDependency */ = {
+		6B9B731D2089F3A700AC8C72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "SQLite iOS";
-			targetProxy = 6B5E0CD52080DEA800010F07 /* PBXContainerItemProxy */;
+			name = GRDBiOS;
+			targetProxy = 6B9B731C2089F3A700AC8C72 /* PBXContainerItemProxy */;
 		};
-		6B9B72972089D5F300AC8C72 /* PBXTargetDependency */ = {
+		6B9B73212089F3A900AC8C72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Toaster;
-			targetProxy = 6B9B72962089D5F300AC8C72 /* PBXContainerItemProxy */;
+			targetProxy = 6B9B73202089F3A900AC8C72 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
