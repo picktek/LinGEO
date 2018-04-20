@@ -50,7 +50,7 @@
 		6B9B731B2089F3A600AC8C72 /* GRDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B73152089F3A200AC8C72 /* GRDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B9B731E2089F3A900AC8C72 /* Toaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B72F92089F39D00AC8C72 /* Toaster.framework */; };
 		6B9B731F2089F3A900AC8C72 /* Toaster.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B72F92089F39D00AC8C72 /* Toaster.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6B9B733A208A092900AC8C72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9B7338208A092800AC8C72 /* LaunchScreen.storyboard */; };
+		6BAB53F4208A1C7B0079F880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAB53E9208A1C7B0079F880 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,7 +227,7 @@
 		6B6EE4E92084C3C000F70470 /* synth_mbrola.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = synth_mbrola.cpp; sourceTree = "<group>"; };
 		6B9B72F22089F39D00AC8C72 /* Toaster.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toaster.xcodeproj; path = Toaster/Toaster.xcodeproj; sourceTree = "<group>"; };
 		6B9B72FE2089F3A100AC8C72 /* GRDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GRDB.xcodeproj; path = GRDB/GRDB.xcodeproj; sourceTree = "<group>"; };
-		6B9B7339208A092800AC8C72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6BAB53EA208A1C7B0079F880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,8 +271,8 @@
 				6B5E0C9C2080B69100010F07 /* MasterViewController.swift */,
 				6B5E0C9E2080B69100010F07 /* DetailViewController.swift */,
 				6B32363B208732520009696A /* BookmarksTableViewController.swift */,
+				6BAB53E9208A1C7B0079F880 /* LaunchScreen.storyboard */,
 				6B5E0CA02080B69100010F07 /* Main.storyboard */,
-				6B9B7338208A092800AC8C72 /* LaunchScreen.storyboard */,
 				6B5E0CA32080B69200010F07 /* Assets.xcassets */,
 				6B5E0CA82080B69200010F07 /* Info.plist */,
 				6B5E0CAE2080B74700010F07 /* ilingoka.sqlite */,
@@ -536,7 +536,7 @@
 				6B5E0CAF2080B74700010F07 /* ilingoka.sqlite in Resources */,
 				6B5E0CA42080B69200010F07 /* Assets.xcassets in Resources */,
 				6B5E0CA22080B69100010F07 /* Main.storyboard in Resources */,
-				6B9B733A208A092900AC8C72 /* LaunchScreen.storyboard in Resources */,
+				6BAB53F4208A1C7B0079F880 /* LaunchScreen.storyboard in Resources */,
 				6B0A34372084C473000C560D /* espeak-data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,10 +609,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6B9B7338208A092800AC8C72 /* LaunchScreen.storyboard */ = {
+		6BAB53E9208A1C7B0079F880 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6B9B7339208A092800AC8C72 /* Base */,
+				6BAB53EA208A1C7B0079F880 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -742,7 +742,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = N43S8JF6JT;
 				INFOPLIST_FILE = lingeo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -767,7 +767,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = N43S8JF6JT;
 				INFOPLIST_FILE = lingeo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -17,7 +17,16 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.15294117647058825" green="0.20000000000000001" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="LingeoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="D0J-e8-tT3">
+                                <rect key="frame" x="141" y="301.5" width="92" height="64"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.22352941179999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D0J-e8-tT3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0au-Ik-ZYj"/>
+                            <constraint firstItem="D0J-e8-tT3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="dMv-bD-i3O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -26,4 +35,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LingeoLogo" width="92" height="64"/>
+    </resources>
 </document>
