@@ -62,7 +62,7 @@ class MasterViewController: UITableViewController {
             dbPool,
             sql: "SELECT t1.id, t1.eng, t1.transcription, t2.geo, t4.name, t4.abbr FROM eng t1, geo t2, geo_eng t3, types t4 " +
                 "WHERE t1.eng LIKE ? || \"%\" AND t3.eng_id=t1.id AND t2.id=t3.geo_id AND t4.id=t2.type " +
-            "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT 20",
+            "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT 15",
             arguments: [self.searchQuery])
         
         fetchController.trackChanges(
@@ -85,7 +85,9 @@ class MasterViewController: UITableViewController {
                 case .move(let indexPath, let newIndexPath, _):
                     // Actually move cells around for more demo effect :-)
                     let cell = self.tableView.cellForRow(at: indexPath)
-                    self.tableView.moveRow(at: indexPath, to: newIndexPath)
+                    //                    self.tableView.moveRow(at: indexPath, to: newIndexPath)
+                    self.tableView.deleteRows(at: [indexPath], with: .none)
+                    self.tableView.insertRows(at: [newIndexPath], with: .none)
                     if let cell = cell {
                         self.configure(cell, at: newIndexPath)
                     }
@@ -98,7 +100,8 @@ class MasterViewController: UITableViewController {
             didChange: { [unowned self] _ in
                 self.tableView.endUpdates()
         })
-        try! fetchController.performFetch()
+        
+        try! self.fetchController.performFetch()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -131,8 +134,8 @@ class MasterViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        searchController.becomeFirstResponder()
-        searchController.searchBar.becomeFirstResponder()
+        self.searchController.becomeFirstResponder()
+        self.searchController.searchBar.becomeFirstResponder()
         super.viewDidAppear(animated)
     }
     
