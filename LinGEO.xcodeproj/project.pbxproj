@@ -49,6 +49,8 @@
 		6B6EE5012084C3C000F70470 /* sonic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4E52084C3C000F70470 /* sonic.cpp */; };
 		6B6EE5032084C3C000F70470 /* dictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4E82084C3C000F70470 /* dictionary.cpp */; };
 		6B6EE5042084C3C000F70470 /* synth_mbrola.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE4E92084C3C000F70470 /* synth_mbrola.cpp */; };
+		6B9B72942089D5F300AC8C72 /* Toaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B728F2089D5A900AC8C72 /* Toaster.framework */; };
+		6B9B72952089D5F300AC8C72 /* Toaster.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9B728F2089D5A900AC8C72 /* Toaster.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,34 @@
 			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
 			remoteInfo = "SQLite iOS";
 		};
+		6B9B728E2089D5A900AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A75E2B1BCF2066002E46C4;
+			remoteInfo = Toaster;
+		};
+		6B9B72902089D5A900AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A75E4F1BCF20D4002E46C4;
+			remoteInfo = ToasterDemo;
+		};
+		6B9B72922089D5A900AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C06FC9D11F95A8CC00782082;
+			remoteInfo = ToasterTests;
+		};
+		6B9B72962089D5F300AC8C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 03A75E2A1BCF2066002E46C4;
+			remoteInfo = Toaster;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,6 +148,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				6B5E0CD42080DEA800010F07 /* SQLite.framework in Embed Frameworks */,
+				6B9B72952089D5F300AC8C72 /* Toaster.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +220,7 @@
 		6B6EE4E72084C3C000F70470 /* mbrowrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbrowrap.h; sourceTree = "<group>"; };
 		6B6EE4E82084C3C000F70470 /* dictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dictionary.cpp; sourceTree = "<group>"; };
 		6B6EE4E92084C3C000F70470 /* synth_mbrola.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = synth_mbrola.cpp; sourceTree = "<group>"; };
+		6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toaster.xcodeproj; path = Toaster/Toaster.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B45C9022084BB630060AF55 /* AudioToolbox.framework in Frameworks */,
+				6B9B72942089D5F300AC8C72 /* Toaster.framework in Frameworks */,
 				6B5E0CD32080DEA800010F07 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,21 +260,16 @@
 			children = (
 				6B0A34362084C473000C560D /* espeak-data */,
 				6B6EE4BB2084C3C000F70470 /* espeak-src */,
-				6B45C8EE208494B60060AF55 /* Debouncer.swift */,
 				6B5E0C972080B69100010F07 /* AppDelegate.swift */,
 				6B5E0C9C2080B69100010F07 /* MasterViewController.swift */,
 				6B5E0C9E2080B69100010F07 /* DetailViewController.swift */,
 				6B32363B208732520009696A /* BookmarksTableViewController.swift */,
-				6B2AF4952088D66F00A44030 /* Reachability.swift */,
-				6B2AF49D2088D97500A44030 /* SwiftyJSON.swift */,
 				6B5E0CA02080B69100010F07 /* Main.storyboard */,
 				6B5E0CA32080B69200010F07 /* Assets.xcassets */,
 				6B5E0CA52080B69200010F07 /* LaunchScreen.storyboard */,
 				6B5E0CA82080B69200010F07 /* Info.plist */,
 				6B5E0CAE2080B74700010F07 /* ilingoka.sqlite */,
 				6B45C8FE2084BB460060AF55 /* LinGEO-Bridging-Header.h */,
-				6B45C94A2084BC8F0060AF55 /* PTeSpeak.h */,
-				6B45C9492084BC8F0060AF55 /* PTeSpeak.m */,
 				6B323643208732B90009696A /* Bookmarks.xcdatamodeld */,
 			);
 			path = lingeo;
@@ -250,6 +278,12 @@
 		6B5E0CB12080BB5300010F07 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				6B45C8EE208494B60060AF55 /* Debouncer.swift */,
+				6B2AF4952088D66F00A44030 /* Reachability.swift */,
+				6B2AF49D2088D97500A44030 /* SwiftyJSON.swift */,
+				6B45C94A2084BC8F0060AF55 /* PTeSpeak.h */,
+				6B45C9492084BC8F0060AF55 /* PTeSpeak.m */,
+				6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */,
 				6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */,
 			);
 			path = libraries;
@@ -329,6 +363,16 @@
 			path = "espeak/espeak-src";
 			sourceTree = "<group>";
 		};
+		6B9B72832089D5A900AC8C72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B9B728F2089D5A900AC8C72 /* Toaster.framework */,
+				6B9B72912089D5A900AC8C72 /* ToasterDemo.app */,
+				6B9B72932089D5A900AC8C72 /* ToasterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -345,6 +389,7 @@
 			);
 			dependencies = (
 				6B5E0CD62080DEA800010F07 /* PBXTargetDependency */,
+				6B9B72972089D5F300AC8C72 /* PBXTargetDependency */,
 			);
 			name = LinGEO;
 			productName = lingeo;
@@ -382,6 +427,10 @@
 				{
 					ProductGroup = 6B5E0CB32080BB6C00010F07 /* Products */;
 					ProjectRef = 6B5E0CB22080BB6C00010F07 /* SQLite.xcodeproj */;
+				},
+				{
+					ProductGroup = 6B9B72832089D5A900AC8C72 /* Products */;
+					ProjectRef = 6B9B72822089D5A900AC8C72 /* Toaster.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -439,6 +488,27 @@
 			fileType = wrapper.framework;
 			path = SQLite.framework;
 			remoteRef = 6B5E0CC82080BB6C00010F07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B728F2089D5A900AC8C72 /* Toaster.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Toaster.framework;
+			remoteRef = 6B9B728E2089D5A900AC8C72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B72912089D5A900AC8C72 /* ToasterDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ToasterDemo.app;
+			remoteRef = 6B9B72902089D5A900AC8C72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B9B72932089D5A900AC8C72 /* ToasterTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ToasterTests.xctest;
+			remoteRef = 6B9B72922089D5A900AC8C72 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -507,6 +577,11 @@
 			isa = PBXTargetDependency;
 			name = "SQLite iOS";
 			targetProxy = 6B5E0CD52080DEA800010F07 /* PBXContainerItemProxy */;
+		};
+		6B9B72972089D5F300AC8C72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Toaster;
+			targetProxy = 6B9B72962089D5F300AC8C72 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

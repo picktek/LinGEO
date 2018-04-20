@@ -19,20 +19,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MasterViewController.tableView(_:cellForRowAt:):MasterViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "rowChunk">
-            </PersistentString>
-            <PersistentString
-               value = "chunkStart">
-            </PersistentString>
-            <PersistentString
-               value = "chunkEnd">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "DetailViewController.saveBookmark(_:):DetailViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -40,6 +26,14 @@
             </PersistentString>
             <PersistentString
                value = "geos.joined(&quot;,&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.deleteBookmark(_:):DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "id">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -52,10 +46,16 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DetailViewController.deleteBookmark(_:):DetailViewController.swift">
+         contextName = "MasterViewController.tableView(_:cellForRowAt:):MasterViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "id">
+               value = "rowChunk">
+            </PersistentString>
+            <PersistentString
+               value = "chunkStart">
+            </PersistentString>
+            <PersistentString
+               value = "chunkEnd">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -78,6 +78,14 @@
             </PersistentString>
             <PersistentString
                value = "appDelegate.persistentContainer.viewContext">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in MasterViewController.searchDB():MasterViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.searchResult">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

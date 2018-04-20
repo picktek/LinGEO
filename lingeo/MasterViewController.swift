@@ -8,17 +8,18 @@
 
 import UIKit
 import SQLite
+import CoreData
 
 class MasterViewController: UITableViewController {
+    
+    @IBOutlet var bookmarksItem:UIBarButtonItem!
     
     var detailViewController: DetailViewController!
     var db: Connection!
     let map: [String:String] = ["i": "ი","W": "ჭ","z": "ზ","h": "ჰ","y": "ყ","g": "გ","x": "ხ","C": "ჩ","f": "ფ","w": "წ","T": "თ","e": "ე","S": "შ","v": "ვ","d": "დ","R": "ღ","u": "უ","c": "ც","t": "ტ","b": "ბ","s": "ს","a": "ა","r": "რ","q": "ქ","p": "პ","o": "ო","n": "ნ","J": "ჟ","m": "მ","l": "ლ","Z": "ძ","k": "კ","G": "ჩ","j": "ჯ"]
     let searchController = UISearchController(searchResultsController: nil)
     var searchResult:[[String:String]] = []
-    var searchResultCache:[String:[[String:String]]] = [:]
     var searchQuery:String = ""
-    var debouncedSearch:Debouncer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +35,7 @@ class MasterViewController: UITableViewController {
             db = try appDelegate.getDB()
         } catch {
             print(error)
-        }
-        
-        db.trace { print($0) }
+        }        
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -50,43 +49,62 @@ class MasterViewController: UITableViewController {
             navigationItem.titleView = searchController.searchBar
         }
         definesPresentationContext = true
+        //        self.searchDB()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
         
-        debouncedSearch = Debouncer(delay: 0.25) {
-            if(self.searchQuery.count == 0 && self.searchResultCache[self.searchQuery] == nil) {
-                return
-            }
-            self.searchDB()
+        if(bookmarksIsEmpty()) {
+            navigationItem.rightBarButtonItem = nil
+        } else {
+            navigationItem.rightBarButtonItem = bookmarksItem
         }
         
-        self.searchDB()
+    }
+    
+    private func bookmarksIsEmpty() -> Bool
+    {
+        
+        let appDel:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDel.persistentContainer.viewContext
+        
+        let request:NSFetchRequest<Bookmarks> = Bookmarks.fetchRequest()
+        do {
+            try context.execute(request)
+            let count = try context.count(for: request)
+            return count == 0
+        } catch {
+            print(error)
+        }
+        
+        return true
     }
     
     private func searchDB() {
-        if(self.searchResultCache[self.searchQuery] != nil) {
-            self.searchResult = self.searchResultCache[self.searchQuery]!
-            self.tableView.reloadData()
-            return
-        }
-        
-        DispatchQueue.global(qos: .userInteractive).async {
+        DispatchQueue.global(qos: .utility).async {
             do {
                 let query = "SELECT t1.id, t1.eng, t1.transcription, t2.geo, t4.name, t4.abbr FROM eng t1, geo t2, geo_eng t3, types t4 " +
                 "WHERE t1.eng LIKE ? || \"%\" AND t3.eng_id=t1.id AND t2.id=t3.geo_id AND t4.id=t2.type " +
                 "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT 30"
-                
+                let currentSearch = self.searchQuery
                 var rows = [[String:String]]()
-                for rowJoined in try self.db.prepare(query, [self.searchQuery]) {
+                for rowJoined in try self.db.prepare(query, [currentSearch]) {
+                    if(currentSearch != self.searchQuery) {
+                        return
+                    }
                     rows.append([
                         "id": String(rowJoined[0] as! Int64),
                         "eng": String(rowJoined[1] as! String),
                         "geo": self.convert(toKA: String(rowJoined[3] as! String))
                         ])
                 }
-                self.searchResult = rows;
-                self.searchResultCache[self.searchQuery] = self.searchResult
-                
                 DispatchQueue.main.async {
+                    self.searchResult = rows;
                     self.tableView.reloadData()
+                    if(self.searchResult.count > 0) {
+                        self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+                    }
                 }
             } catch {
                 print(error)
@@ -117,6 +135,8 @@ class MasterViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showDetail", sender: nil)
+        
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -159,7 +179,7 @@ class MasterViewController: UITableViewController {
     
     func filterContentForSearchText(_ searchText: String) {
         searchQuery = searchText
-        debouncedSearch.call()
+        searchDB()
     }
     
     func searchBarIsEmpty() -> Bool {

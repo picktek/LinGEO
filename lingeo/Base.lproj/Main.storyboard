@@ -72,7 +72,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="თარგმანი" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htO-G6-Vxm">
-                                            <rect key="frame" x="30" y="30" width="279" height="28"/>
+                                            <rect key="frame" x="30" y="30" width="286" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -84,16 +84,16 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80I-yJ-SlB">
-                                            <rect key="frame" x="317" y="5" width="50" height="50"/>
+                                            <rect key="frame" x="324" y="12.5" width="35" height="35"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="iZa-NJ-qiW"/>
-                                                <constraint firstAttribute="width" constant="50" id="wIN-Eb-4MD"/>
+                                                <constraint firstAttribute="height" constant="35" id="iZa-NJ-qiW"/>
+                                                <constraint firstAttribute="width" constant="35" id="wIN-Eb-4MD"/>
                                             </constraints>
                                             <state key="normal" image="Play"/>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="80I-yJ-SlB" secondAttribute="trailing" constant="8" id="5Nq-rk-GOp"/>
+                                        <constraint firstAttribute="trailing" secondItem="80I-yJ-SlB" secondAttribute="trailing" constant="16" id="5Nq-rk-GOp"/>
                                         <constraint firstItem="80I-yJ-SlB" firstAttribute="centerY" secondItem="OVx-h3-920" secondAttribute="centerY" id="D0R-eJ-gQI"/>
                                         <constraint firstItem="80I-yJ-SlB" firstAttribute="leading" secondItem="htO-G6-Vxm" secondAttribute="trailing" constant="8" id="KXT-if-k02"/>
                                         <constraint firstItem="tGb-FO-yFA" firstAttribute="leading" secondItem="oAq-YR-GGd" secondAttribute="trailing" constant="2" id="NzU-zn-EcI"/>
@@ -175,6 +175,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bookmarksItem" destination="Mep-Ju-Iq2" id="OyU-g6-w8z"/>
                         <outlet property="searchDisplayController" destination="3bp-kd-uoM" id="bFl-Tu-Dsg"/>
                         <segue destination="wgy-bN-peV" kind="show" identifier="showDetail" id="W8P-js-1J8"/>
                     </connections>
@@ -216,16 +217,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yyZ-GN-Hzk">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="-2" width="45.5" height="26.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4NA-MG-ES6">
-                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="16" y="24.5" width="62" height="21.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -248,9 +249,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Play" width="128" height="128"/>
+        <image name="Play" width="328" height="328"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rz9-hv-6bb"/>
+        <segue reference="W8P-js-1J8"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -204,7 +204,6 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         do {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             db = try appDelegate.getDB()
-            db.trace { print($0) }
 
             return db
         } catch {

@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import SQLite
+import Toaster
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -98,14 +99,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
-            if(data != nil) {
+            if(data != nil) {                
                 do {
                     let syncData = try JSON(data: data!)
                     if(syncData["total"] > 0) {
+                        var executionCount = 0
                         for (_ , subJson):(String, JSON) in syncData["data"] {
                             self.executeMigration(query: subJson["query"].string!, uuid: subJson["uuid"].string!)
+                            executionCount = executionCount + 1
                         }
-                        self.syncWithCloud.call()
+                        if(executionCount > 0) {
+                            self.syncWithCloud.call()
+                            DispatchQueue.main.async {
+                                Toast(text: "Database Updated!").show()
+                            }
+                        }
                     }
                 } catch {
                     print(error)
