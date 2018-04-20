@@ -86,7 +86,7 @@ class MasterViewController: UITableViewController {
             do {
                 let query = "SELECT t1.id, t1.eng, t1.transcription, t2.geo, t4.name, t4.abbr FROM eng t1, geo t2, geo_eng t3, types t4 " +
                 "WHERE t1.eng LIKE ? || \"%\" AND t3.eng_id=t1.id AND t2.id=t3.geo_id AND t4.id=t2.type " +
-                "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT 30"
+                "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT 20"
                 let currentSearch = self.searchQuery
                 var rows = [[String:String]]()
                 for rowJoined in try self.db.prepare(query, [currentSearch]) {
