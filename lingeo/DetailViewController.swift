@@ -48,7 +48,7 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
                     for rowJoined in rows {
                         id = String(rowJoined[0] as! Int64)
                         eng = String(rowJoined[1] as! String)
-                        trans = String(rowJoined[2] as! String)
+                        trans = String(rowJoined[2] == nil ? "" : rowJoined[2] as! String)
                         geos.append(convert(toKA: String(rowJoined[3] as! String)))
                         types.append(String(rowJoined[4] as! String))
                         abbrs.append(String(rowJoined[5] as! String))

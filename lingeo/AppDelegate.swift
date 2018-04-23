@@ -100,8 +100,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             url = URL(string: "https://lingeo.picktek.org/api/migration")
         }
-
-        let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+        let config = URLSessionConfiguration.ephemeral
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = nil
+        
+        let session = URLSession.init(configuration: config)
+        let task = session.dataTask(with: url) {(data, response, error) in
             if(data != nil) {                
                 do {
                     let syncData = try JSON(data: data!)
