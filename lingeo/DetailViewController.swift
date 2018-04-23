@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SQLite
+import GRDB
 import CoreData
 
 class DetailsTableViewCell: UITableViewCell {
@@ -21,7 +21,7 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     
     var managedObjectContext: NSManagedObjectContext? = nil
-    var db: Connection!
+    var db: DatabasePool!
     var count:Int = 0
     var id:String! = ""
     var eng:String! = ""
@@ -40,17 +40,25 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         count = 1
         do {
             let query = "SELECT t1.id, t1.eng, t1.transcription, t2.geo, t4.name, t4.abbr FROM eng t1, geo t2, geo_eng t3, types t4 " +
-                "WHERE t1.id = ? AND t3.eng_id=t1.id AND t2.id=t3.geo_id AND t4.id=t2.type group by t2.id"
+            "WHERE t1.id = ? AND t3.eng_id=t1.id AND t2.id=t3.geo_id AND t4.id=t2.type group by t2.id"
             
-            for rowJoined in (try self.getDB()?.prepare(query, [detailItemID!]))! {
-                id = String(rowJoined[0] as! Int64)
-                eng = String(rowJoined[1] as! String)
-                trans = String(rowJoined[2] as! String)
-                geos.append(convert(toKA: String(rowJoined[3] as! String)))
-                types.append(String(rowJoined[4] as! String))
-                abbrs.append(String(rowJoined[5] as! String))
+            try self.getDB()!.read { db in
+                do {
+                    let rows = try Row.fetchAll(db, query, arguments: [detailItemID], adapter: nil)
+                    for rowJoined in rows {
+                        id = String(rowJoined[0] as! Int64)
+                        eng = String(rowJoined[1] as! String)
+                        trans = String(rowJoined[2] == nil ? "" : rowJoined[2] as! String)
+                        geos.append(convert(toKA: String(rowJoined[3] as! String)))
+                        types.append(String(rowJoined[4] as! String))
+                        abbrs.append(String(rowJoined[5] as! String))
+                        
+                        count = count + 1
+                    }
+                } catch {
+                    print(error)
+                }
                 
-                count = count + 1
             }
             
             self.navigationItem.backBarButtonItem?.title = "LinGEO"
@@ -115,7 +123,7 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         
         loadRightButton()
     }
-
+    
     @objc
     func deleteBookmark(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
@@ -148,7 +156,7 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:UITableViewCell
         if(indexPath.row == 0) {
@@ -196,7 +204,7 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         }
     }
     
-    private func getDB() -> Connection? {
+    private func getDB() -> DatabasePool? {
         if(db != nil) {
             return db
         }
@@ -204,7 +212,7 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         do {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             db = try appDelegate.getDB()
-
+            
             return db
         } catch {
             print(error)
@@ -213,14 +221,14 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         
         return nil
     }
-
+    
     var detailItemID: String? {
         didSet {
             // Update the view.
             configureView()
         }
     }
-
+    
     func convert(toKA str: String) -> String {
         var ret = String()
         
@@ -238,7 +246,7 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         
         return ret
     }
-
+    
     var fetchedResultsController: NSFetchedResultsController<Bookmarks> {
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
@@ -262,6 +270,6 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         return _fetchedResultsController!
     }
     var _fetchedResultsController: NSFetchedResultsController<Bookmarks>? = nil
-
+    
 }
 

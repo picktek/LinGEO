@@ -17,68 +17,6 @@
             endingLineNumber = "213"
             landmarkName = "FailableIterator"
             landmarkType = "21">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SQLite.RowIterator.map&lt;A&gt;((SQLite.Row) throws -&gt; A) throws -&gt; Swift.Array&lt;A&gt;"
-                  moduleName = "SQLite"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ld/_DEV/pt/LinGEO/SQLite/Sources/SQLite/Core/Statement.swift"
-                  timestampString = "545908013.904707"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "227"
-                  endingLineNumber = "227"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;SQLite.Row&gt; in closure #1 () -&gt; Swift.AnyIterator&lt;SQLite.Row&gt; in SQLite.Connection.prepare(SQLite.QueryType) throws -&gt; Swift.AnySequence&lt;SQLite.Row&gt;"
-                  moduleName = "SQLite"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ld/_DEV/pt/LinGEO/SQLite/Sources/SQLite/Core/Statement.swift"
-                  timestampString = "545908013.9072011"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "227"
-                  endingLineNumber = "227"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SQLite.Connection.pluck(SQLite.QueryType) throws -&gt; Swift.Optional&lt;SQLite.Row&gt;"
-                  moduleName = "SQLite"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ld/_DEV/pt/LinGEO/SQLite/Sources/SQLite/Core/Statement.swift"
-                  timestampString = "545908013.909592"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "227"
-                  endingLineNumber = "227"
-                  offsetFromSymbolStart = "364">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[0] = Exploded&gt; of SQLite.RowIterator.failableNext() throws -&gt; Swift.Optional&lt;SQLite.Row&gt;"
-                  moduleName = "SQLite"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ld/_DEV/pt/LinGEO/SQLite/Sources/SQLite/Core/Statement.swift"
-                  timestampString = "545908013.911872"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "227"
-                  endingLineNumber = "227"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
