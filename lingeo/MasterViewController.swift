@@ -47,6 +47,7 @@ class MasterViewController: UITableViewController {
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Type Here…"
         searchController.searchBar.delegate = self
         
@@ -117,14 +118,11 @@ class MasterViewController: UITableViewController {
     
     private func bookmarksIsEmpty() -> Bool
     {
-        
-        let appDel:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDel.persistentContainer.viewContext
-        
         let request:NSFetchRequest<Bookmarks> = Bookmarks.fetchRequest()
+        
         do {
-            try context.execute(request)
-            let count = try context.count(for: request)
+            try CoreDataStack.managedObjectContext.execute(request)
+            let count = try CoreDataStack.managedObjectContext.count(for: request)
             return count == 0
         } catch {
             print(error)
