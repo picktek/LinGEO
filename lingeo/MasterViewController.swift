@@ -38,6 +38,9 @@ class MasterViewController: UITableViewController {
     var searchResult:[[String:String]] = []
     var searchQuery:String = ""
     var fetchController:FetchedRecordsController<Word>!
+    let searchSql:String = "SELECT t1.id, t1.eng, t1.transcription, t2.geo, t4.name, t4.abbr FROM eng t1, geo t2, geo_eng t3, types t4 " +
+        "WHERE t1.eng LIKE ? || \"%\" AND t3.eng_id=t1.id AND t2.id=t3.geo_id AND t4.id=t2.type " +
+    "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT 15"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,9 +64,7 @@ class MasterViewController: UITableViewController {
         
         fetchController = try! FetchedRecordsController<Word>(
             dbPool,
-            sql: "SELECT t1.id, t1.eng, t1.transcription, t2.geo, t4.name, t4.abbr FROM eng t1, geo t2, geo_eng t3, types t4 " +
-                "WHERE t1.eng LIKE ? || \"%\" AND t3.eng_id=t1.id AND t2.id=t3.geo_id AND t4.id=t2.type " +
-            "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT 15",
+            sql: searchSql,
             arguments: [self.searchQuery])
         
         fetchController.trackChanges(
@@ -119,10 +120,12 @@ class MasterViewController: UITableViewController {
     private func bookmarksIsEmpty() -> Bool
     {
         let request:NSFetchRequest<Bookmarks> = Bookmarks.fetchRequest()
+        let appDel:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDel.persistentContainer.viewContext
         
         do {
-            try CoreDataStack.managedObjectContext.execute(request)
-            let count = try CoreDataStack.managedObjectContext.count(for: request)
+            try context.execute(request)
+            let count = try context.count(for: request)
             return count == 0
         } catch {
             print(error)
@@ -171,10 +174,7 @@ class MasterViewController: UITableViewController {
         searchQuery = searchText
         
         DispatchQueue.global(qos: .userInitiated).async {
-            try! self.fetchController.setRequest(sql: "SELECT t1.id, t1.eng, t1.transcription, t2.geo, t4.name, t4.abbr FROM eng t1, geo t2, geo_eng t3, types t4 " +
-                "WHERE t1.eng LIKE ? || \"%\" AND t3.eng_id=t1.id AND t2.id=t3.geo_id AND t4.id=t2.type " +
-                "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT 20",
-                                                 arguments: [self.searchQuery], adapter: nil)
+            try! self.fetchController.setRequest(sql: self.searchSql, arguments: [self.searchQuery], adapter: nil)
         }
     }
     

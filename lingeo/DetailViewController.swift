@@ -71,7 +71,8 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         ptSpeak.delegate = self
         ptSpeak.setup(withVoice: "ka", volume: 100, rate: 150, pitch: 40)
         
-        self.managedObjectContext = CoreDataStack.managedObjectContext
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.managedObjectContext = appDelegate.persistentContainer.viewContext
         
         loadRightButton()
     }
@@ -106,14 +107,7 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
     @objc
     func saveBookmark(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
-        var newBookmark:Bookmarks!
-        
-        if #available(iOS 10.0, *) {
-            newBookmark = Bookmarks(context: context)
-        } else {
-            let entityDesc = NSEntityDescription.entity(forEntityName: "Bookmarks", in: CoreDataStack.managedObjectContext)
-            newBookmark = Bookmarks(entity: entityDesc!, insertInto: CoreDataStack.managedObjectContext)
-        }
+        let newBookmark = Bookmarks(context: context)
         
         newBookmark.eng_id = Int64(id)!;
         newBookmark.eng = eng

@@ -5,6 +5,19 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES"
+            buildForTesting = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "56439B2D1F4CA1DC0066043F"
+               BuildableName = "GRDBOSXPerformanceComparisonTests.xctest"
+               BlueprintName = "GRDBOSXPerformanceComparisonTests"
+               ReferencedContainer = "container:GRDB.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Release"

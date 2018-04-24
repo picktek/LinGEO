@@ -11,3 +11,4 @@ build
 *.mode2v3
 SQLite/SQLite.xcodeproj/xcuserdata/ld.xcuserdatad/xcschemes/xcschememanagement.plist
 SQLite/SQLite.playground/playground.xcworkspace/xcuserdata/ld.xcuserdatad/UserInterfaceState.xcuserstate
+.idea

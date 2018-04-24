@@ -2,11 +2,15 @@ import UIKit
 import CoreData
 
 class BookmarksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    var managedObjectContext: NSManagedObjectContext? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.rightBarButtonItem = editButtonItem
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.managedObjectContext = appDelegate.persistentContainer.viewContext
         
         do {
             try self.fetchedResultsController.performFetch()
@@ -99,7 +103,7 @@ class BookmarksTableViewController: UITableViewController, NSFetchedResultsContr
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
