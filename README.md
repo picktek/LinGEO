@@ -1,5 +1,5 @@
 
-# LinGEO for iOS
+# LinGEO
 The popular english-gerogian dictionary iOS application was rewritten from skratch in Swift language. The original version is developed by Ioseb Dzmanashvili and contributed by Lasha Dolidze, but it no longer maintenanced and has been retired. You can see old version [here](https://github.com/ioseb/LinGEO)
 
 ---
