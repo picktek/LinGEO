@@ -7,7 +7,7 @@ The application was rewritten from skratch in Swift language. The original versi
 ---
 
 LinGEO is the easy English to Georgian translator. 
-Database holds 60861 English words with accurate Georgian translations. 
+Database holds 60789 English words with accurate Georgian translations. 
 
 LinGEO offers easy search functionality just type the symbol and matched words will be shown immediately. 
 Application offers detailed view of the search words with transcription and all possible Georgian translations. 
