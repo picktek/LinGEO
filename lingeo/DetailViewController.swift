@@ -67,9 +67,13 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
             print(error)
         }
         
-        ptSpeak = PTeSpeak.shared()
-        ptSpeak.delegate = self
-        ptSpeak.setup(withVoice: "ka", volume: 100, rate: 150, pitch: 40)
+        #if targetEnvironment(simulator)
+            print("No ptSpeak")
+        #else
+            ptSpeak = PTeSpeak.shared()
+            ptSpeak.delegate = self
+            ptSpeak.setup(withVoice: "ka", volume: 100, rate: 150, pitch: 40)
+        #endif
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.managedObjectContext = appDelegate.persistentContainer.viewContext

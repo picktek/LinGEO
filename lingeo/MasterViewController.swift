@@ -38,19 +38,24 @@ class MasterViewController: UITableViewController {
     var searchResult:[[String:String]] = []
     var searchQuery:String = ""
     var fetchController:FetchedRecordsController<Word>!
-    let searchSql:String = "SELECT t1.id, t1.eng, t1.transcription, t2.geo, t4.name, t4.abbr FROM eng t1, geo t2, geo_eng t3, types t4 " +
+    var searchSql:String = "SELECT t1.id, t1.eng, t1.transcription, t2.geo, t4.name, t4.abbr FROM eng t1, geo t2, geo_eng t3, types t4 " +
         "WHERE t1.eng LIKE ? || \"%\" AND t3.eng_id=t1.id AND t2.id=t3.geo_id AND t4.id=t2.type " +
-    "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT 15"
+    "GROUP BY t1.id ORDER BY t1.id,t1.eng LIMIT "
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(UIDevice.current.userInterfaceIdiom == .pad) {
+            searchSql = searchSql + "30"
+        } else {
+            searchSql = searchSql + "20"
+        }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         dbPool = try! appDelegate.getDB()
         
         searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false        
         searchController.searchBar.placeholder = "Type Here…"
         searchController.searchBar.delegate = self
         
@@ -87,16 +92,11 @@ class MasterViewController: UITableViewController {
                 case .move(let indexPath, let newIndexPath, _):
                     // Actually move cells around for more demo effect :-)
                     let cell = self.tableView.cellForRow(at: indexPath)
-                    //                    self.tableView.moveRow(at: indexPath, to: newIndexPath)
                     self.tableView.deleteRows(at: [indexPath], with: .none)
                     self.tableView.insertRows(at: [newIndexPath], with: .none)
                     if let cell = cell {
                         self.configure(cell, at: newIndexPath)
                     }
-                    
-                    // A quieter animation:
-                    // self.tableView.deleteRows(at: [indexPath], with: .fade)
-                    // self.tableView.insertRows(at: [newIndexPath], with: .fade)
                 }
             },
             didChange: { [unowned self] _ in
