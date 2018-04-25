@@ -1,5 +1,5 @@
 
-# LinGEO
+# LinGEO v1.5
 Reload of the new popular offline English-Georgian dictionary. Now we hold 60789 English words. If you have feedback or want to add new words, you can reach us pick at picktek.com or use github [issue](https://github.com/picktek/LinGEO/issues) page.
 
 The application was rewritten from skratch in Swift language. The original version is developed by Ioseb Dzmanashvili and contributed by Lasha Dolidze, but it no longer maintenanced and has been retired. You can see old version [here](https://github.com/ioseb/LinGEO)
