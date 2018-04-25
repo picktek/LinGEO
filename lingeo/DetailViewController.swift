@@ -72,7 +72,6 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         #else
             ptSpeak = PTeSpeak.shared()
             ptSpeak.delegate = self
-            ptSpeak.setup(withVoice: "ka", volume: 100, rate: 150, pitch: 40)
         #endif
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -157,6 +156,14 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         configureView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated);
+        
+        if(ptSpeak.isSpeak()) {
+            ptSpeak.stop()
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return count
     }
@@ -199,6 +206,8 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
     
     @objc func speakGEO(sender: UIButton!) {
         speakingButton = sender
+        
+        ptSpeak.setup(withVoice: "ka", volume: 100, rate: 150, pitch: 40)
         ptSpeak.speak(convert(toKA: (sender.titleLabel?.text)!))
     }
     
@@ -206,6 +215,15 @@ class DetailViewController: UITableViewController, PTeSpeakDelegate {
         if(ptSpeak.isSpeak()) {
             ptSpeak.stop()
         }
+    }
+    
+    @IBAction func speakEng(sender: Any? = nil) {
+        if(ptSpeak.isSpeak()) {
+            ptSpeak.stop()
+            return
+        }
+        ptSpeak.setup(withVoice: "en-us", volume: 100, rate: 150, pitch: 40)
+        ptSpeak.speak(eng)
     }
     
     private func getDB() -> DatabasePool? {

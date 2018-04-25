@@ -57,7 +57,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let finalDatabaseURL = documentsUrl.first!.appendingPathComponent("ilingoka.sqlite")
         if(dbPool == nil ) {
-            dbPool = try DatabasePool(path: finalDatabaseURL.path)
+            var config = Configuration()
+            config.trace = { print("SQL: \($0)") } // Prints all SQL statements
+            dbPool = try DatabasePool(path: finalDatabaseURL.path, configuration: config)
         }
         return dbPool
     }

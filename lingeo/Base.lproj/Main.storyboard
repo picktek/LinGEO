@@ -44,6 +44,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zev-WC-26i">
                                             <rect key="frame" x="16" y="25" width="45.5" height="26.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <gestureRecognizers/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -57,6 +58,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ssS-DU-mCP" appends="YES" id="IX3-A5-Rco"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detail-row" rowHeight="60" id="o6f-fJ-tvZ" customClass="DetailsTableViewCell" customModule="LinGEO" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="128" width="375" height="60"/>
@@ -122,6 +126,11 @@
                     <navigationItem key="navigationItem" id="ACq-U8-3We"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKO-b8-Q9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ssS-DU-mCP">
+                    <connections>
+                        <action selector="speakEngWithSender:" destination="wgy-bN-peV" id="tbz-1s-UjP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1172" y="279"/>
         </scene>
