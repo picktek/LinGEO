@@ -228,8 +228,14 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let controller = segue.destination as! DetailViewController
-                let word = fetchController.record(at: indexPath)
-                controller.detailItemID = String(word.id)
+                
+                if(exploreModeState) {
+                    let row = searchResult.count > 0 ? searchResult[indexPath.row] : dict[letters[indexPath.section]]![indexPath.row]
+                    controller.detailItemID = row["id"]
+                } else {
+                    let word = fetchController.record(at: indexPath)
+                    controller.detailItemID = String(word.id)
+                }
             }
         }
     }
